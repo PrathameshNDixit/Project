@@ -7,8 +7,11 @@ $(document).ready(function () {
     });
 });
 function saveperform() {
-    var gender = $('#Name').val();
-    if (gender == "") {
+    var place = $('#Place').val();
+    var subject = $('#Subject').val();
+    var OutwardNo = $('#OutwardNo').val();
+    var OutwardLetterNo = $('#OutwardLetterNo').val();
+    if (place=="" || subject=="" || OutwardNo=="" || OutwardLetterNo=="") {
         // alert("requird");
         swal({
             title: "",

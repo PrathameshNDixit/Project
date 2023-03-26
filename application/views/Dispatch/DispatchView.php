@@ -392,14 +392,14 @@
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>OutwardNo</label>
-                                    <input type="text" class="form-control" id="OutwardNo" name="OutwardNo" required
+                                    <label>Outward Number*</label>
+                                    <input type="number" class="form-control" id="OutwardNo" name="OutwardNo" required
                                         value="<?php if (!empty($data))
                                             echo $data[0]->OutwardNo; ?>" />
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>OutwardLetterNo</label>
+                                    <label>Outward Letter No*</label>
                                     <input type="number" class="form-control" id="OutwardLetterNo"
                                         name="OutwardLetterNo" required value="<?php if (!empty($data))
                                             echo $data[0]->OutwardLetterNo; ?>" />
@@ -427,7 +427,7 @@
                                         echo $data[0]->Address; ?>"></textarea>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Place</label>
+                                    <label>Place*</label>
                                     <input type="text" class="form-control" id="Place" name="Place" required value="<?php if (!empty($data))
                                         echo $data[0]->Place; ?>" />
                                 </div>
@@ -444,7 +444,7 @@
                                             echo $data[0]->IncommingDate; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                    <label>Subject</label>
+                                    <label>Subject*</label>
                                     <textarea class="form-control" name="Subject" id="Subject" cols="4" rows="4" value="<?php if (!empty($data))
                                         echo $data[0]->Subject; ?>"></textarea>
                                 </div>
