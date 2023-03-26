@@ -1,7 +1,6 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-
 <style>
     .dform-group label {
         position: absolute;
@@ -19,20 +18,16 @@
         text-align: left;
     }
 
-    .fform-group label {
-        position: absolute;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        color: #1273eb;
-        background: #ffffff;
-        border-radius: 30px;
-        font-size: 13px;
-        font-weight: 600;
-        top: -30px;
-        left: 24px;
-        padding: -1px 7px;
-        z-index: 10;
-        text-align: left;
+    #ref-date {
+        top: -50px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .form-group {
+        margin-block: 30px;
     }
 
     .form-group label {
@@ -139,6 +134,7 @@
     .my-heading {
         font-size: 2rem;
         margin: 30px 0 50px;
+        color: #3f48cc;
     }
 
     /* Button css */
@@ -241,7 +237,12 @@
         font-size: 11px;
     }
 
+
+
     @media only screen and (max-width: 768px) {
+        #ref-date {
+            top: -25px;
+        }
 
         .form-group {
             height: 20vh;
@@ -387,18 +388,21 @@
 
                             <div class="row p-3">
                                 <div class="col-12 my-heading">
-                                    <div>Lorem ipsum dolor sit amet consectetur</div>
+                                    <div>Outward Letter Transaction Information</div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" id="Name" name="Name" required value="<?php if (!empty($data))
-                                        echo $data[0]->Name; ?>" />
-                                </div>
+
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>OutwardNo</label>
                                     <input type="text" class="form-control" id="OutwardNo" name="OutwardNo" required
                                         value="<?php if (!empty($data))
                                             echo $data[0]->OutwardNo; ?>" />
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    <label>OutwardLetterNo</label>
+                                    <input type="number" class="form-control" id="OutwardLetterNo"
+                                        name="OutwardLetterNo" required value="<?php if (!empty($data))
+                                            echo $data[0]->OutwardLetterNo; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>OutwardDate</label>
@@ -408,13 +412,18 @@
                                 </div>
 
 
+
                                 <div class="col-12 my-heading">
-                                    <div>Lorem ipsum dolor sit amet consectetur</div>
+                                    <div>To Whom Correspondance</div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" id="Name" name="Name" required value="<?php if (!empty($data))
+                                        echo $data[0]->Name; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>Address</label>
-
-                                    <textarea class="form-control" id="Address" name="Address" rows="4" cols="50" value="<?php if (!empty($data))
+                                    <textarea class="form-control" id="Address" name="Address" rows="3" cols="4" value="<?php if (!empty($data))
                                         echo $data[0]->Address; ?>"></textarea>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
@@ -423,10 +432,32 @@
                                         echo $data[0]->Place; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>OutwardDate</label>
-                                    <input type="number" class="form-control" id="OutwardLetterNo"
-                                        name="OutwardLetterNo" required value="<?php if (!empty($data))
-                                            echo $data[0]->OutwardLetterNo; ?>" />
+                                    <label>Incomming Reference Number</label>
+                                    <input type="text" class="form-control" id="IncommingRefNo" name="IncommingRefNo"
+                                        required value="<?php if (!empty($data))
+                                            echo $data[0]->IncommingRefNo; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                    <label id="ref-date">Incomming Date for Reference</label>
+                                    <input type="date" class="form-control" id="IncommingDate" name="IncommingDate"
+                                        required value="<?php if (!empty($data))
+                                            echo $data[0]->IncommingDate; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
+                                    <label>Subject</label>
+                                    <textarea class="form-control" name="Subject" id="Subject" cols="4" rows="4" value="<?php if (!empty($data))
+                                        echo $data[0]->Subject; ?>"></textarea>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
+                                    <label>Remark</label>
+                                    <textarea class="form-control" name="Remark" id="Remark" cols="4" rows="3" value="<?php if (!empty($data))
+                                        echo $data[0]->Remark; ?>"></textarea>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                    <label>Postal Charges</label>
+                                    <input type="number" class="form-control" id="PostalCharges" name="PostalCharges"
+                                        required value="<?php if (!empty($data))
+                                            echo $data[0]->PostalCharges; ?>" />
                                 </div>
 
 
@@ -442,7 +473,6 @@
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
                                         id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
                                                 style="color:white;"></i> Edit</button>
-
                                 </div>
                             </div>
                         </form>

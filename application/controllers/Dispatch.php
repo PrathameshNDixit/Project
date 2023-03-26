@@ -45,6 +45,10 @@ class Dispatch extends CI_Controller
         $Address = $this->input->post('Address');
         $Place = $this->input->post('Place');
         $OutwardLetterNo = $this->input->post('OutwardLetterNo');
+        $IncommingRefNo=$this->input->post('IncommingRefNo');
+        $IncommingDate=$this->input->post('IncommingDate');
+        $Subject=$this->input->post('Subject');
+        $Remark=$this->input->post('Remark');
         $fields = array(
             'Name' => $name,
             'OutwardDate' => $OutwardDate,
@@ -52,6 +56,10 @@ class Dispatch extends CI_Controller
             'Address'=>$Address,
             'Place'=>$Place,
             'OutwardLetterNo'=>$OutwardLetterNo,
+            'IncommingRefNo'=>$IncommingRefNo,
+            'Subject'=>$Subject,
+            'IncommingDate'=>$IncommingDate,
+            'Remark'=>$Remark
             // 'created_date' => date('Y-m-d H:i:s'),
             // 'created_by' => 1
         );
