@@ -467,7 +467,7 @@
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
                                         <th>Action</td>
-                                        <th>Dispatch Id</th>
+                                        <th>Receive Id</th>
                                         <th>Name</th>
                                         <th>Place</th>
                                         <th>Address</th>
@@ -478,12 +478,12 @@
                                     <?php
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'Branch/create/' . $data[$i]->DispatchId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
-                                        echo '<td>' . $data[$i]->DispatchId . '</td>';
-                                        echo '<td>' . $data[$i]->Name . '</td>';
+                                        echo '<td><a href="' . base_url() . 'Branch/create/' . $data[$i]->ReceiveId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td>' . $data[$i]->ReceiveId . '</td>';
+                                        echo '<td>' . $data[$i]->InwardName . '</td>';
                                         echo '<td>' . $data[$i]->Place . '</td>';
                                         echo '<td>' . $data[$i]->Address . '</td>';
-                                        echo '<td>' . $data[$i]->IncommingDate . '</td>';
+                                        echo '<td>' . $data[$i]->IncomingDate . '</td>';
                                         echo '</tr>';
                                     }
                                     ?>
