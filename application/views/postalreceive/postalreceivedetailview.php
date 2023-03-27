@@ -467,18 +467,23 @@
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
                                         <th>Action</td>
-                                        <th>City Id</th>
-                                        <th>City Name </th>
-
+                                        <th>Receive Id</th>
+                                        <th>Name</th>
+                                        <th>Place</th>
+                                        <th>Address</th>
+                                        <th>Incomming Date for Ref</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'City/' . $data[$i]->CityId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
-                                        echo '<td>' . $data[$i]->CityId . '</td>';
-                                        echo '<td>' . $data[$i]->CItyName . '</td>';
+                                        echo '<td><a href="' . base_url() . 'Branch/create/' . $data[$i]->ReceiveId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td>' . $data[$i]->ReceiveId . '</td>';
+                                        echo '<td>' . $data[$i]->InwardName . '</td>';
+                                        echo '<td>' . $data[$i]->Place . '</td>';
+                                        echo '<td>' . $data[$i]->Address . '</td>';
+                                        echo '<td>' . $data[$i]->IncomingDate . '</td>';
                                         echo '</tr>';
                                     }
                                     ?>
@@ -506,6 +511,7 @@
                 src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
             <script type="text/javascript"
                 src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap3.min.js"></script>
+
 
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
             <script type="text/javascript" src=https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js></script>
