@@ -344,8 +344,8 @@ border-radius: 10px;
             <!-- ============ Body content start ============= -->
             <div class="main-content">
               <div class="breadcrumb">
-                <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-                    <h4>Enquiry</h4>
+                <img height="50px" width="380px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
+                    <h4>Main Menu Type Information </h4>
                     <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -359,60 +359,42 @@ border-radius: 10px;
                         <form id="Form"  action="" method="POST">
                         <div class="row p-3">
 
-                                <input type="hidden" name="id" id="EnquiryId" value="<?php if(!empty($dataa[0]->EnquiryId)){echo $dataa[0]->EnquiryId;}?>" > 
+                                <input type="hidden" name="id" id="MainMenuId" value="<?php if(!empty($dataa[0]->MainMenuId)){echo $dataa[0]->MainMenuId;}?>" > 
 
 
                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                            <label for="firstName1">Enquiry Name</label>
-                                            <input class="form-control" id="EnquiryName" type="text" name="EnquiryName" value="<?php if(!empty($dataa[0]->EnquiryName)){echo $dataa[0]->EnquiryName;}?>" />
-                                        </div>
+                                            <label for="firstName1">Main Menu Type Name</label>
+                                            <input class="form-control" id="MainMenuName" type="text" name="MainMenuName" placeholder="Enter Main Menu Type Name" value="<?php if(!empty($dataa[0]->MainMenuName)){echo $dataa[0]->MainMenuName;}?>" />
+                                    </div>
 
                                     <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                            <label for="firstName1">Enquiry Time</label>
-                                            <input class="form-control" id="EnquiryTime" type="Time" name="EnquiryTime" value="<?php if(!empty($dataa[0]->EnquiryTime)){echo $dataa[0]->EnquiryTime;}?>" />
-                                        </div>
+                                        <label for="firstName1">Description</label>
+                                        <textarea class="form-control" id="MainMenuDescription" type="text" name="MainMenuDescription" placeholder="Enter Description" value="<?php if(!empty($dataa[0]->MainMenuDescription)){echo $dataa[0]->MainMenuDescription;}?>"></textarea>
+                                    </div>
 
                                     <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                            <label for="firstName1">Date</label>
-                                            <input class="form-control" id="Date" type="Date" name="Date" value="<?php if(!empty($dataa[0]->Date)){echo $dataa[0]->Date;}?>" />
-                                        </div>
-                                        
-                                        
-                                        <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                                         <label for="">Reference Type</label>
-            <select name="RefType" id="RefType" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
-                                            
-                                                <option value="MLA">MLA</option>
-                                                <option value="Chief Minister">Chief Minister</option>
-                                                <option value="Prime Minister">Prime Minister</option>
-                                                <option value="President">President</option>
+                                        <label for="name">Photo</label>
+                                        <input type="file" class="form-control form-control-sm" id="photo" name="photo" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo; ?>"  >
+                                         
+                                    <?php if(!empty($dataa[0]->photo)){
+                                     ?>
+                        <img src="<?php echo base_url();?>upload/<?php echo $dataa[0]->photo ?>" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px"> 
+                      <?php } ?>
+                            
+                      <img src="" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px" /> 
+                      <input type="hidden" name="hidden_photo" value="<?php if(!empty($dataa[0]->photo)){echo $dataa[0]->photo;} ?>">    
+                  </div>
+                       
+                </div>
 
-                                        </select>
-                                        </div> <br><br><br>
+                                   
 
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                            <label for="firstName1">Reference Name</label>
-                                            <input class="form-control" id="RefName" type="text" name="RefName" value="<?php if(!empty($dataa[0]->RefName)){echo $dataa[0]->RefName;}?>" />
-                                        </div>
-
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                            <label for="firstName1">Reference No</label>
-                                            <input class="form-control" id="RefNo" type="number" name="RefNo" value="<?php if(!empty($dataa[0]->RefNo)){echo $dataa[0]->RefNo;}?>" />
-                                        </div>
-
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                            <label for="firstName1">Enquiry Reason</label>
-                                            <textarea class="form-control" id="EnquiryReason" type="text" name="EnquiryReason" value="<?php if(!empty($dataa[0]->EnquiryReason)){echo $dataa[0]->EnquiryReason;}?>" ></textarea>
-                                        </div>
-
-
-                                        
-
+                                    
 
                                             <div class="col-md-12 text-right">
                                             <button class="btn btn-md btn-success btnright text-white" type="button" name="btn_save" id="btn_save"><i class="nav-icon fa-regular fa-circle-check "></i> Save</button>
                                            
-                                            <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="<?php echo base_url();?>Enquiry/index" style="color:white;"></i> Edit</button>
+                                            <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="<?php echo base_url();?>MainMenu/index" style="color:white;"></i> Edit</button>
 
                                         </div>
                                     </div>
@@ -424,7 +406,7 @@ border-radius: 10px;
                   
 
 <script  src="<?php echo base_url('web_resources');?>/dist/js/jquery.min.js"></script>          
-<script  src="<?php echo base_url('web_resources');?>/dist/js/controllers/enquiry_create.js"></script>
+<script  src="<?php echo base_url('web_resources');?>/dist/js/controllers/MainMenu_create.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>                 
    
 

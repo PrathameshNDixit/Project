@@ -442,7 +442,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Enquiry</h4>
+            <h4>Add Main Menu</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -461,34 +461,34 @@
                                     <div class="addnewbutton">
                                         <!-- <a href="create"><i class="fas fa-plus-circle animtxt" aria-hidden="true"></i>&nbsp;Add New</a> -->
                                         <button type="button" class=" btn Addnew"><a href="create"><i
-                                                    class="fas fa-plus-circle animtxt" aria-hidden="true"></i>&nbsp;Add
-                                                New</a></button>
+                                                    class="fas fa-plus-circle animtxt" aria-hidden="true"></i>&nbsp;Add New</a></button>
                                     </div>
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
                                         <th>Id</th>
-                                        <th>Enquiry Name</th>
-                                        <th>Enquiry Time</th>
-                                        <th>Date</th>
-                                        <th>Reference Type</th>
-                                        <th>Reference Name</th>
-                                        <th>Reference No</th>
-                                        <th>Enquiry Reason</th>
+                                        <th>Main Menu Type</th>
+                                        <th>Menu Type Name</th>
+                                        <th>Menu Name</th>
+                                        <th>Item Status</th>
+                                        <th>Rate</th>
+                                        <th>GST</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'Enquiry/create/' . $data[$i]->EnquiryId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td><a href="' . base_url() . 'MenuCreation/create/' . $data[$i]->MenuCreationId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
                                        
-                                        echo "<td>".$data[$i]->EnquiryId."</td>";
-                                        echo "<td>".$data[$i]->EnquiryName."</td>";
-                                        echo "<td>".$data[$i]->Date."</td>";
-                                        echo "<td>".$data[$i]->RefType."</td>";
-                                        echo "<td>".$data[$i]->RefName."</td>";
-                                        echo "<td>".$data[$i]->RefNo."</td>";
-                                        echo "<td>".$data[$i]->EnquiryReason."</td>";
+                                        echo "<td>".$data[$i]->MenuCreationId."</td>";
+                                        echo "<td>".$data[$i]->MenuType."</td>";
+                                        echo "<td>".$data[$i]->MenuTypeName."</td>";
+                                        echo "<td>".$data[$i]->MenuName."</td>";
+                                        echo "<td>".$data[$i]->itemstatus."</td>";
+                                        echo "<td>".$data[$i]->rate."</td>";
+                                        echo "<td>".$data[$i]->GST."</td>";
+                                       
                                         echo '</tr>';
                                     }
                                     ?>
