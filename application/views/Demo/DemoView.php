@@ -355,14 +355,21 @@
             inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
     }
 </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <link rel="stylesheet" href="<?php echo base_url() ?>web_resources\dist\css\patti.css">
+
+
+
+
+
 <!-- =============== Left side End ================-->
 <div class="main-content-wrap sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Enquiry</h4>
+            <h4>Add Company</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -377,81 +384,83 @@
                         <form id="Form" action="" method="POST">
                             <div class="row p-3">
 
-                                <input type="hidden" name="id" id="EnquiryId" value="<?php if (!empty($dataa[0]->EnquiryId)) {
-                                    echo $dataa[0]->EnquiryId;
-                                } ?>">
-
-
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label for="firstName1">Enquiry Name</label>
-                                    <input class="form-control" id="EnquiryName" type="text" name="EnquiryName" value="<?php if (!empty($dataa[0]->EnquiryName)) {
-                                        echo $dataa[0]->EnquiryName;
-                                    } ?>" />
+                                    <label>Branch name</label>
+                                    <input type="text" class="form-control" id="branch_name" name="branch_name" required
+                                        value="<?php if (!empty($data))
+                                            echo $data[0]->branch_name; ?>" />
+
                                 </div>
 
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label for="firstName1">Enquiry Time</label>
-                                    <input class="form-control" id="EnquiryTime" type="Time" name="EnquiryTime" value="<?php if (!empty($dataa[0]->EnquiryTime)) {
-                                        echo $dataa[0]->EnquiryTime;
-                                    } ?>" />
-                                </div>
+                                <?php if (!empty($data)) {
+                                    echo "<input name='branch_id' id='branch_id' value='" . $data[0]->branch_id . "' type='hidden' />";
+                                }
+                                ?>
 
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label for="firstName1">Date</label>
-                                    <input class="form-control" id="Date" type="Date" name="Date" value="<?php if (!empty($dataa[0]->Date)) {
-                                        echo $dataa[0]->Date;
-                                    } ?>" />
-                                </div>
 
 
                                 <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for="">Reference Type</label>
-                                    <select name="RefType" id="RefType" data-control="select2" data-hide-search="true"
-                                        class="js-states form-control nav selectpicker">
-                                        <!-- <select class="form-control" name="RefType"> -->
-                                        <option value="MLA">MLA</option>
-                                        <option value="Chief Minister">Chief Minister</option>
-                                        <option value="Prime Minister">Prime Minister</option>
-                                        <option value="President">President</option>
+                                    <label for=""> Type</label>
+                                    <select name="company_type" id="company_type" data-control="select2"
+                                        data-hide-search="true" class="js-states form-control nav selectpicker">
+                                        <option selected disabled value="0">Marathi</option>
+                                        <option value="1">English</option>
                                     </select>
-
-                                    <!-- <?php
-
-                                    foreach ($State as $key => $value) {
-                                        $selected = "";
-                                        if (!empty($dataa[0]->branch_id)) {
-                                            //if(2 == 1 )
-                                            if ($value->StateId == $dataa[0]->FkState) {
-                                                $selected = "selected='selected'";
-                                            }
-                                        }
-                                        echo '<option value="' . $value->StateId . '"' . $selected . ' >' . $value->StateName . '</option>';
-                                    }
-                                    ?> -->
-                                    </select>
-                                </div> <br><br><br>
-
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label for="firstName1">Reference Name</label>
-                                    <input class="form-control" id="RefName" type="text" name="RefName" value="<?php if (!empty($dataa[0]->RefName)) {
-                                        echo $dataa[0]->RefName;
-                                    } ?>" />
                                 </div>
 
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label for="firstName1">Reference No</label>
-                                    <input class="form-control" id="RefNo" type="number" name="RefNo" value="<?php if (!empty($dataa[0]->RefNo)) {
-                                        echo $dataa[0]->RefNo;
-                                    } ?>" />
+
+                                <div class="mynav">
+                                    <li class="mynav-link" id="link-1">Home</li>
+                                    <li class="mynav-link" id="link-2">About</li>
+                                    <li class="mynav-link" id="link-3">Carreers</li>
+                                </div>
+                                <div id="div-1" class="mydiv p-0">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="div-2" class="mydiv">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label for="firstName1">Enquiry Reason</label>
-                                    <textarea class="form-control" id="EnquiryReason" type="text" name="EnquiryReason"
-                                        value="<?php if (!empty($dataa[0]->EnquiryReason)) {
-                                            echo $dataa[0]->EnquiryReason;
-                                        } ?>"></textarea>
-                                </div>
+
+
+
 
                                 <div class="col-md-12 text-right">
                                     <button class="btn btn-md btn-success btnright text-white" type="button"
@@ -459,9 +468,12 @@
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
-                                        id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a
-                                                href="<?php echo base_url(); ?>Enquiry/index" style="color:white;"></i>
-                                        Edit</button>
+                                        id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
+                                                style="color:white;"></i> Edit</button>
+
+
+
+
 
                                 </div>
                             </div>
@@ -471,8 +483,20 @@
             </div>
         </div>
 
-
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/enquiry_create.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/patti.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/branch_create.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+
+
+
+        <script>
+
+
+            $("#company_type").select2({});
+
+        </script>
