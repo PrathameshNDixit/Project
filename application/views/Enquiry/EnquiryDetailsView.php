@@ -4,7 +4,7 @@
             <!-- ============ Body content start ============= -->
             <div class="main-content">
                 <div class="breadcrumb d-flex justify-content-end">
-                  
+                
                 <button class="btn btn-primary "  type="button" name="" id="">
                     <a href="<?=base_url() ?>Enquiry/create" class="text-white">Add New</a>
                 </button>

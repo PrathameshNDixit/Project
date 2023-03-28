@@ -377,13 +377,13 @@
                             <div class="row p-3">
 
                                 <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Branch name</label>
+                                    <label>Customer Number</label>
                                     <input type="text" class="form-control" id="branch_name" name="branch_name" required
                                         value="<?php if (!empty($data))
                                             echo $data[0]->branch_name; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                    <label for="">Reference Type</label>
+                                    <label for="">Customer Name</label>
                                     <select style="padding-inline:10px" name="RefType" id="RefType"
                                         data-control="select2" data-hide-search="true"
                                         class="js-states form-control nav selectpicker mi-2">
@@ -396,19 +396,19 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Branch name</label>
+                                    <label>Booking Type</label>
                                     <input type="text" class="form-control" id="branch_name" name="branch_name" required
                                         value="<?php if (!empty($data))
                                             echo $data[0]->branch_name; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Branch name</label>
+                                    <label>Booking Source</label>
                                     <input type="text" class="form-control" id="branch_name" name="branch_name" required
                                         value="<?php if (!empty($data))
                                             echo $data[0]->branch_name; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Branch name</label>
+                                    <label>Booking Source No</label>
                                     <input type="text" class="form-control" id="branch_name" name="branch_name" required
                                         value="<?php if (!empty($data))
                                             echo $data[0]->branch_name; ?>" />
@@ -433,7 +433,7 @@
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Branch name</label>
+                                        <label>Is hourly Booking</label>
                                         <input type="text" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
@@ -497,6 +497,50 @@
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
+                                    <div class="col-12 mt-4 mb-4">
+                                        <div style="width:100px" class="mt-3 mb-3 badge bg-primary col-12">Advanced
+                                        </div>
+                                    </div>
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                        <label for="">Reference Type</label>
+                                        <select style="padding-inline:10px" name="RefType" id="Room"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="A.C">A.C</option>
+                                            <option value="Non-A.C">NoN A.C</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                        <label for="">Reference Type</label>
+                                        <select style="padding-inline:10px" name="RefType" id="RoomNo"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="90">90</option>
+                                            <option value="100">100</option>
+                                            <option value="200">200</option>
+                                            <option value="300">300</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-md btn-success btnright text-white" type="button"
+                                            name="btn_save" id="addToList"><i
+                                                class="nav-icon fa-regular fa-circle-check "></i>
+                                            Add to List</button>
+                                    </div>
+
+                                    <table class="table col-12 mt-3 p-3">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th scope="col">Room Type Id</th>
+                                                <th scope="col">Room Name</th>
+                                                <th scope="col">Room No</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="mytbody">
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <div id="div-3" class="mydiv">
