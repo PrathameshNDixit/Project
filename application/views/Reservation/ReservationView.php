@@ -433,19 +433,19 @@
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Is hourly Booking</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Arrival Time</label>
+                                        <input type="time" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 form-group mt-0">
-                                        <label>Branch name</label>
+                                        <label>Is hourly Booking</label>
                                         <input type="checkbox" class="form-check-input form-control" id="branch_name"
                                             name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6  form-group  mt-0">
-                                        <label>Branch name</label>
+                                        <label>Purpose of visit</label>
                                         <textarea placeholder="enter purpose of visit" class="form-control"
                                             name="Subject" id="Subject" cols="4" rows="2" value="<?php if (!empty($data))
                                                 echo $data[0]->Subject; ?>"></textarea>
@@ -461,37 +461,37 @@
                             <div id="div-2" class="mydiv">
                                 <div class="row p-3">
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Childrens</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Children Amount</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Adults</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="date" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Adult Amount</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Bed</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
+                                        <label>Bed Amount</label>
                                         <input type="text" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
@@ -506,6 +506,7 @@
                                             data-control="select2" data-hide-search="true"
                                             class="js-states form-control nav selectpicker">
                                             <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
                                             <option value="A.C">A.C</option>
                                             <option value="Non-A.C">NoN A.C</option>
                                         </select>
@@ -516,6 +517,7 @@
                                             data-control="select2" data-hide-search="true"
                                             class="js-states form-control nav selectpicker">
                                             <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
                                             <option value="90">90</option>
                                             <option value="100">100</option>
                                             <option value="200">200</option>
@@ -545,32 +547,32 @@
                             <div id="div-3" class="mydiv">
                                 <div class="row p-3">
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
+                                        <label>Rent Start Time</label>
                                         <input type="date" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Rent Start Time</label>
+                                        <input type="time" class="form-control" id="branch_name" name="branch_name"
+                                            required value="<?php if (!empty($data))
+                                                echo $data[0]->branch_name; ?>" />
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                        <label>Rent End Date</label>
+                                        <input type="date" class="form-control" id="branch_name" name="branch_name"
+                                            required value="<?php if (!empty($data))
+                                                echo $data[0]->branch_name; ?>" />
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                        <label>Rent End Time</label>
+                                        <input type="time" class="form-control" id="branch_name" name="branch_name"
+                                            required value="<?php if (!empty($data))
+                                                echo $data[0]->branch_name; ?>" />
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                        <label>Rent</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
@@ -578,8 +580,8 @@
 
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>GST</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
@@ -600,8 +602,8 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Total Rent Amount</label>
+                                        <input type="number" class="form-control" id="branch_name" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
@@ -610,138 +612,239 @@
                             <div id="div-4" class="mydiv">
                                 <div class="row p-3">
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <label>Facility Name*</label>
+                                        <input placeholder="Enter Name" type="text" class="form-control"
+                                            id="FacilityName" name="FacilityName" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <label>
+                                            Rate</label>
+                                        <input placeholder="Enter Rate" type="number" class="form-control" id="Rate"
+                                            name="Rate" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <label>Quantity</label>
+                                        <input placeholder="Enter Quantity" type="number" class="form-control"
+                                            id="Quantity" name="Quantity" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-md btn-success btnright text-white" type="button"
+                                            name="btn_save" id="addToList2"><i
+                                                class="nav-icon fa-regular fa-circle-check "></i>
+                                            Add to List</button>
                                     </div>
 
+                                    <table class="table col-12 mt-3 p-3 mb-3">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Facility Name</th>
+                                                <th scope="col">Rate</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="mytbody2">
+                                        </tbody>
+                                    </table>
+                                    <div class="input-group mb-3 col-2 ml-auto">
+                                        <input type="text" id="output" placeholder="Total" class="input ms-auto" style="width:100px;
+                                            padding:5px 7px;
+                                            border-radius:10px;">
+                                    </div>
                                 </div>
                             </div>
                             <div id="div-5" class="mydiv">
                                 <div class="row p-3">
-                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                        <label for="">Discount Type</label>
+                                        <select style="padding-inline:10px" name="RefType" id="Room"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
+                                            <option value="Cash Discount">Cash Discount</option>
+                                            <option value="Card Discount">Card Discount</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                        <label>Discount Percentage</label>
+                                        <input placeholder="Enter Percentage" type="number" class="form-control"
+                                            id="branch_name" name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <label>Discount Amount</label>
+                                        <input placeholder="Enter Amount" type="number" class="form-control"
+                                            id="branch_name" name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                 </div>
                             </div>
                             <div id="div-6" class="mydiv">
                                 <div class="row p-3">
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                        <label for="">Payment Type</label>
+                                        <select style="padding-inline:10px" name="RefType" id="PaymentType"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
+                                            <option value="UPI">UPI</option>
+                                            <option value="Net Banking">Net Banking</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                        <label for="">
+                                            Mobile App</label>
+                                        <select style="padding-inline:10px" name="RefType" id="MobileApp"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
+                                            <option value="GPay">GPay</option>
+                                            <option value="Phonepe">Phonepe</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <label>
+                                            Transaction Id</label>
+                                        <input placeholder="Enter Transaction Id" type="number" class="form-control"
+                                            id="TransactionId" name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                        <label for="">Select Bank</label>
+                                        <select style="padding-inline:10px" name="RefType" id="ReservationDate"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
+                                            <option value="SBI">SBI</option>
+                                            <option value="HDFC">HDFC</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                        <label>Cheque No</label>
+                                        <input placeholder="Enter Cheque No" type="number" class="form-control"
+                                            id="ChequeNo" name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                        <label>Payment Date</label>
+                                        <input type="date" class="form-control" id="PaymentDate" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <label>Paid Amount</label>
+                                        <input placeholder="Enter Paid Amount" type="text" class="form-control"
+                                            id="PaidAmount" name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
+                                    <div class="col-12">
+                                        <button class="btn btn-md btn-success btnright text-white" type="button"
+                                            name="btn_save" id="addToList3"><i
+                                                class="nav-icon fa-regular fa-circle-check "></i>
+                                            Add to List</button>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
-                                    </div>
+
+                                    <table class="table col-12 mt-3 p-3 mb-3">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Payment Type</th>
+                                                <th scope="col">Mobile App</th>
+                                                <th scope="col">Transaction Id</th>
+                                                <th scope="col">Reservation Date</th>
+                                                <th scope="col">Cheque No</th>
+                                                <th scope="col">Payment Date</th>
+                                                <th scope="col">Paid Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="mytbody3">
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <div id="div-7" class="mydiv">
                                 <div class="row p-3">
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
+                                        <label>Menu Type Name</label>
+                                        <select style="padding-inline:10px" name="RefType" id="MenuTypeName"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
+                                            <option value="Pizza">Pizza</option>
+                                            <option value="Iddli">Iddli</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Menu Name</label>
+                                        <select style="padding-inline:10px" name="RefType" id="MenuName"
+                                            data-control="select2" data-hide-search="true"
+                                            class="js-states form-control nav selectpicker">
+                                            <!-- <select class="form-control" name="RefType"> -->
+                                            <option value="select">Select</option>
+                                            <option value="UPI">UPI</option>
+                                            <option value="Net Banking">Net Banking</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                        <label>Quantity</label>
+                                        <input placeholder="Enter Quantity" type="text" class="form-control" id="Quantity" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Rate</label>
+                                        <input placeholder="Enter Rate" type="number" class="form-control" id="Rate2" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Processing time</label>
+                                        <input type="time" class="form-control" id="Processingtime" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Delivery Time</label>
+                                        <input type="time" class="form-control" id="DeliveryTime" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                        <label>Total Amount</label>
+                                        <input placeholder="Total Amount" type="text" class="form-control" id="TotalAmount" name="branch_name"
                                             required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                        <label>Reservation Date</label>
-                                        <input type="text" class="form-control" id="branch_name" name="branch_name"
-                                            required value="<?php if (!empty($data))
-                                                echo $data[0]->branch_name; ?>" />
+                                    <div class="col-12">
+                                        <button class="btn btn-md btn-success btnright text-white" type="button"
+                                            name="btn_save" id="addToList4"><i
+                                                class="nav-icon fa-regular fa-circle-check "></i>
+                                            Add to List</button>
                                     </div>
+
+                                    <table class="table col-12 mt-3 p-3 mb-3">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Menu Type Name</th>
+                                                <th scope="col">Menu Name</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Rate</th>
+                                                <th scope="col">Processing time</th>
+                                                <th scope="col">Delivery Time</th>
+                                                <th scope="col">Total Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="mytbody4">
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <!-- ********************************** -->
