@@ -14,13 +14,17 @@
     body {
         background-color: #90e0ef;
     }
-    .footerHead{
+
+    .footerHead {
         font-weight: bold;
     }
-    .footerDown{
+
+    .footerDown {
         color: red;
     }
 </style>
+</div>
+</div>
 <div class="footerContainer m-0">
     <div class="footerHead">
         Comtranse Technology

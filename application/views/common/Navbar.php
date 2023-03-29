@@ -47,13 +47,14 @@
 <body>
     <nav style="background:#90e0ef" class="navbar navbar-expand-lg p-3">
         <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img width="100" src="<?php echo base_url() ?>Assets/images/sayaji.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span style="background:transparent;" class="navbar-toggler-icon"><i
                         class="fa-solid fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav text-center mx-auto">
+                <ul class="navbar-nav text-center ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="<?php echo base_url() ?>index.php/newdash"><img
                                 class="nav-img" src="<?php echo base_url() ?>Assets/images/dashboard1.png"
@@ -154,10 +155,11 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <img class="nav-img" src="<?php echo base_url() ?>Assets/images/payroll.png" alt="">
-                            Pro module
+                            Inventory
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url() ?>index.php/ItemCreation/">Item
+                                    Creation</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
