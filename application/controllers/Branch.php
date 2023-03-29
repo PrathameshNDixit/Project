@@ -6,13 +6,6 @@ class Branch extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->loggedin();
-        // $this->load->model('Model_Branch');
-    }
-    private function loggedin(){
-        if(!$this->session->userdata('authenticated')){
-            redirect('users/login');
-        }
     }
     public function index()
     {
@@ -21,7 +14,7 @@ class Branch extends CI_Controller
         // print_r($data);
         // $data['data'] = $this->Model_Branch->select_all();
         $data['data']=$this->Commonmodel->getAll('branch_master');
-        $this->load->view('common/header_view');
+        // $this->load->view('common/header_view');
         $this->load->view('Branch/BranchDetailsView', $data);
         // $this->load->view('Branch/Branch_detail',$data);
         $this->load->view('common/footer_view');
@@ -39,9 +32,10 @@ class Branch extends CI_Controller
         //     $obj = $this->Model_Branch->search($branch_id);
         // }
         // $data['data'] = $obj;
-        $this->load->view('common/header_view');
+        // $this->load->view('common/header_view');
+        $this->load->view('common/Navbar');
         $this->load->view('Branch/Branch_View');
-        $this->load->view('common/footer_view');
+        // $this->load->view('common/footer_view');
     }
     function insertBranch()
     {

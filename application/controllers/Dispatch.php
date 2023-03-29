@@ -15,9 +15,9 @@ class Dispatch extends CI_Controller
         // print_r($data);
         // $data['data'] = $this->Model_Branch->select_all();
         $data['data'] = $this->Commonmodel->getAll('postaldispatch');
-        $this->load->view('common/header_view');
+        $this->load->view('common/Navbar');
         $this->load->view('Dispatch/DispatchDetailsView', $data);
-        $this->load->view('common/footer_view');
+        $this->load->view('common/footer');
     }
     public function create()
     {
@@ -32,9 +32,9 @@ class Dispatch extends CI_Controller
         //     $obj = $this->Model_Branch->search($branch_id);
         // }
         // $data['data'] = $obj;
-        $this->load->view('common/header_view');
+        $this->load->view('common/Navbar');
         $this->load->view('Dispatch/DispatchView');
-        $this->load->view('common/footer_view');
+        $this->load->view('common/footer');
     }
     function insertDispatch()
     {

@@ -367,7 +367,7 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap sidenav-open d-flex flex-column">
+<div class="main-content-wrap m-0 d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb">
@@ -466,7 +466,7 @@
                                 }
                                 ?>
                                 <div class="col-md-12 text-right">
-                                    <button class="btn btn-md btn-success btnright text-white" type="button"
+                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 

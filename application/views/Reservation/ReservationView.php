@@ -359,7 +359,7 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>web_resources\dist\css\patti.css">
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap sidenav-open d-flex flex-column">
+<div class="main-content-wrap m-0 d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb p-3">
@@ -794,14 +794,14 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label>Quantity</label>
-                                        <input placeholder="Enter Quantity" type="text" class="form-control" id="Quantity" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <input placeholder="Enter Quantity" type="text" class="form-control"
+                                            id="Quantity" name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label>Rate</label>
-                                        <input placeholder="Enter Rate" type="number" class="form-control" id="Rate2" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <input placeholder="Enter Rate" type="number" class="form-control" id="Rate2"
+                                            name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
@@ -818,8 +818,8 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label>Total Amount</label>
-                                        <input placeholder="Total Amount" type="text" class="form-control" id="TotalAmount" name="branch_name"
-                                            required value="<?php if (!empty($data))
+                                        <input placeholder="Total Amount" type="text" class="form-control"
+                                            id="TotalAmount" name="branch_name" required value="<?php if (!empty($data))
                                                 echo $data[0]->branch_name; ?>" />
                                     </div>
                                     <div class="col-12">
@@ -869,15 +869,16 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script> -->
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/patti.js"></script>
-
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/branch_create.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-
         <script>
             $("#company_type").select2({});
         </script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/branch_create.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>

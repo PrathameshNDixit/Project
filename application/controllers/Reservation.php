@@ -16,9 +16,9 @@ class Reservation extends CI_Controller
     }
     public function create()
     {
-        $this->load->view('common/header_view');
+        $this->load->view('common/Navbar');
         $this->load->view('Reservation/ReservationView');
-        $this->load->view('common/footer_view');
+        $this->load->view('common/footer');
     }
     function insertDispatch()
     {
