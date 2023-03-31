@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mynav-link {
+    text-decoration-style: none;
+    list-style: none;
+    padding: 20px 20px;
+    transition: 0.5s;
+    border-inline-color: black;
+}
+
+.mynav {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    margin-bottom: 50px;
+}
+
+.mynav-link:hover {
+    background-color: grey;
+    color: white;
+}
+
+.hover {
+    background-color: grey;
+    color:white;
+}
+
+.active {
+    display: block;
+    padding: 0;
+    width: 100%;
+}
+
+.mydiv {
+    width: 100%;
+    display: none;
+    padding: 0;
+    width: 100%;
+}
