@@ -391,7 +391,11 @@
 
                             <div class="row p-3">
                                 <div class="col-12 my-heading">
+<<<<<<< HEAD
                                     <div>Booking Banquet</div>
+=======
+                                    <div>Booking Banquest</div>
+>>>>>>> f5e6c7bd5f43a752e5e03fdc9a8cc396f896f090
                                     <hr>
                                 </div>
 
