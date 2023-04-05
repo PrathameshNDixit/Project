@@ -1,10 +1,6 @@
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-
 <link rel="stylesheet" href="<?php echo base_url() ?>web_resources\dist\css\Newdsh.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="mycontainer">
+<div style="background-color: #ddd;" class="mycontainer main-content-wrap sidenav-open justify-content-center">
     <div class="dash-card">
         <div class="img-container">
             <img src="<?php echo base_url() ?>Assets/images/dashboard1.png" alt="">
@@ -116,7 +112,11 @@
     </div>
 </div>
 
+
 <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
+<script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/StudentCreate.js"></script>
+
+<!-- <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script src="<?= base_url(); ?>Assets/js/plugins/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url(); ?>Assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -126,14 +126,15 @@
 <script src="<?= base_url(); ?>Assets/js/scripts/echart.options.min.js"></script>
 <script src="<?= base_url(); ?>Assets/js/scripts/dashboard.v1.script.min.js"></script>
 
+<script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script> -->
 <!-- ***** Added New Scripts*********** -->
 <!--This page JavaScript -->
 
-<script src="<?php echo base_url(); ?>web_resources/dist/js/sweetalert.min.js"></script>
+<!-- <script src="<?php echo base_url(); ?>web_resources/dist/js/sweetalert.min.js"></script> -->
 
-</body>
+<!-- </body> -->
 
 
 <!-- Mirrored from demos.ui-lib.com/gull/html/layout1/upload.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Oct 2022 05:16:55 GMT -->
 
-</html>
+<!-- </html> -->

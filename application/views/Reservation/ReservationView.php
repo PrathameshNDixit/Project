@@ -356,16 +356,16 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
 <link rel="stylesheet" href="<?php echo base_url() ?>web_resources\dist\css\patti.css">
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap m-0 d-flex flex-column">
+<div class="main-content-wrap sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb p-3">
             <img height="50px" width="320px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
             <h4>Reservation Information</h4>
-
         </div>
         <div style="margin-top:-10px;" class=" border-top"></div>
         <div class="row card p-3">

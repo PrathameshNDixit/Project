@@ -308,6 +308,8 @@
     <link rel="stylesheet" href="<?= base_url(); ?>Assets/fontawsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
     <script>
         var base_path = "<?php echo base_url(); ?>";
@@ -462,8 +464,8 @@
         <div class="side-content-wrap">
             <div class="sidebar-left open rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
                 <ul class="navigation-left">
-                    <li class="nav-item"><a class="nav-item-hold" href="<?= base_url() ?>Dashboard"><img height="25px"
-                                src="<?php echo base_url() ?>Assets\images\dashboard.png "><span
+                    <li class="nav-item"><a class="nav-item-hold" href="<?= base_url() ?>index.php\newdash"><img
+                                height="25px" src="<?php echo base_url() ?>Assets\images\dashboard.png "><span
                                 class="nav-text">Dashboard</span></a>
                         <div class="triangle"></div>
                     </li>
@@ -508,9 +510,6 @@
                                 class="nav-text">Report</span></a>
                         <div class="triangle"></div>
                     </li>
-                    <!-- <li class="nav-item" data-item="report"><a class="nav-item-hold" href="#"> <img height="25px" src="<?php echo base_url() ?>Assets\images\logout.png "><span class="nav-text">Report</span></a>
-                        <div class="triangle"></div>
-                    </li>   -->
                     <li class="nav-item" data-item="blogs"><a class="nav-item-hold" href="#"><img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\blogging.png"><span class="nav-text"
                                 style="color:#0161B5">Blogs</span></a>

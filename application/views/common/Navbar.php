@@ -51,7 +51,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span style="background:transparent;" class="navbar-toggler-icon"><i
-                        class="fa-solid fa-bars"></i></span>
+                        class="fa-solid p-1 fa-lg fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav text-center ms-auto">

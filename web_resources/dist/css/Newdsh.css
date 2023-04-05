@@ -1,74 +1,88 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.img-container img{
+
+.img-container img {
     width: 100px;
     aspect-ratio: 3/2;
     object-fit: contain;
     z-index: 1;
     position: relative;
 }
-.dash-card{
+
+.dash-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    /* width: 200px; */
     border-radius: 10px;
     box-shadow: 2px 2px 2px grey;
     background-color: #fff;
     padding: 20px;
     transition: 0.2s;
 }
-.dash-card:hover{
+
+.dash-card:hover {
     transform: scale(1.15);
 }
-.mycontainer{
+
+.mycontainer {
     padding: 20px;
     background-color: #ddd;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     padding-top: 70px;
     padding-bottom: 100px;
     /* margin-top: 100px; */
     justify-content: space-between;
 }
-.content-container{
-    text-align:center;
+
+.content-container {
+    text-align: center;
     margin-top: 10px;
 }
-.myhead{
+
+.myhead {
     font-size: 1.2rem;
     font-weight: bold;
 }
-.nav-img{
+
+.nav-img {
     aspect-ratio: 1/1;
-    object-fit:contain;
+    object-fit: contain;
     width: 30px;
 }
+
 @media only screen and (max-width: 1300px) {
-    .mycontainer{
-        grid-template-columns: repeat(5,1fr);
+    .mycontainer {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
+
 @media only screen and (max-width: 1100px) {
-    .mycontainer{
-        grid-template-columns: repeat(4,1fr);
+    .mycontainer {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
+
 @media only screen and (max-width: 800px) {
-    .mycontainer{
-        grid-template-columns: repeat(3,1fr);
+    .mycontainer {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media only screen and (max-width: 600px) {
-    .mycontainer{
-        grid-template-columns: repeat(2,1fr);
+    .mycontainer {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
-
+@media only screen and (max-width: 460px) {
+    .mycontainer {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,16 +1,17 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Newdash extends CI_Controller {
+class Newdash extends CI_Controller
+{
     public function __construct()
     {
-        parent::__construct(); 
+        parent::__construct();
     }
-	public function index()
-	{
-        $this->load->view('common/Navbar');
-		$this->load->view('Dashboard/Newdashview');
-        $this->load->view('common/footer');
+    public function index()
+    {
+        $this->load->view('common/header_view');
+        $this->load->view('Dashboard/Newdashview');
+        $this->load->view('common/footer_view');
         // $this->load->view('common/footer_view');
-	}
+    }
 }
