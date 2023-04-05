@@ -7,7 +7,6 @@
         </div>
         <div class="content-container">
             <div class="myhead">Dashboard</div>
-            <!-- <p>g ketfhr orvgvb ohbothbo</p> -->
         </div>
     </div>
     <div class="dash-card">
@@ -17,6 +16,14 @@
         <div class="content-container">
             <div class="myhead">Front Office</div>
             <p>All front office</p>
+        </div>
+        <div class="mynav-menu-btn"><i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i></div>
+        <div id="menu1" class="mynav-menu">
+            <a class="mynav-menu-link">Home</a>
+            <a href="<?php echo base_url() ?>index.php/reservation/create" class="mynav-menu-link">Reservation</a>
+            <a class="mynav-menu-link">fvgrtg</a>
+            <a class="mynav-menu-link">4tvbrtby</a>
+            <a class="mynav-menu-link">trbrt</a>
         </div>
     </div>
     <div class="dash-card">
@@ -114,7 +121,7 @@
 
 
 <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-<script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/StudentCreate.js"></script>
+<script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/newdash.js"></script>
 
 <!-- <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>

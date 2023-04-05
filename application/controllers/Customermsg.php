@@ -6,13 +6,13 @@ class Customermsg extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-//$this->loggedin();
+        //$this->loggedin();
         // $this->load->model('Model_Branch');
     }
     /*private function loggedin(){
-        if(!$this->session->userdata('authenticated')){
-            redirect('users/login');
-        }
+    if(!$this->session->userdata('authenticated')){
+    redirect('users/login');
+    }
     }*/
     public function index()
     {
@@ -22,7 +22,7 @@ class Customermsg extends CI_Controller
         // $data['data'] = $this->Model_Branch->select_all();
         //$data['data']=$this->Commonmodel->getAll('branch_master');
         $this->load->view('common/header_view');
-        $this->load->view('Customermsg/CustomermsgDetailView', $data);
+        $this->load->view('Customermsg/CustomermsgDetailView');
         // $this->load->view('Branch/Branch_detail',$data);
         $this->load->view('common/footer_view');
     }
@@ -54,6 +54,6 @@ class Customermsg extends CI_Controller
         );
         echo json_encode($fields);
         // $this->Model_Branch->insert($fields);
-        $this->Commonmodel->insertRecord("branch_master",$fields);
+        $this->Commonmodel->insertRecord("branch_master", $fields);
     }
 }

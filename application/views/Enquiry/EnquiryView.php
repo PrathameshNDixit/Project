@@ -454,7 +454,7 @@
                                 </div>
 
                                 <div class="col-md-12 text-right">
-                                    <button class="btn btn-md btn-success btnright text-white" type="button"
+                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 

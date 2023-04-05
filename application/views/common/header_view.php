@@ -471,10 +471,16 @@
                     </li>
                     <li class="nav-item" data-item="Frontoffice"><a class="nav-item-hold"
                             href="<?= base_url() ?>Frontoffice"><img height="25px"
-                                src="<?php echo base_url() ?>Assets\images\student.png "><span
-                                class="nav-text">Front Office</span></a>
+                                src="<?php echo base_url() ?>Assets\images\office-building.png "><span
+                                class="nav-text">Front
+                                Office</span></a>
                         <div class="triangle"></div>
-                        
+                    </li>
+                    <li class="nav-item" data-item="CallAndPostal"><a class="nav-item-hold"
+                            href="<?= base_url() ?>Frontoffice"><img height="25px"
+                                src="<?php echo base_url() ?>Assets\images\phone.png "><span class="nav-text">Call
+                                and Postal</span></a>
+                        <div class="triangle"></div>
                     </li>
                     <li class="nav-item" data-item="extrakits"><a class="nav-item-hold"
                             href="<?= base_url() ?>Employee"><img height="25px"
@@ -535,13 +541,24 @@
                     <li class="nav-item"><a href="<?= base_url(); ?>dashboard4.html"><i class=" nav-icon nav-icon i-Clock"></i><span class="item-name">Unverify student</span></a></li>
                 </ul> -->
                 <ul class="childNav" data-parent="banquet">
-                <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquestBooking/create"><i
-                                    class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
-                                    class="item-name">New banquet Booking</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquetPkg/create"><i
-                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
-                                    class="item-name">Banquet Package Creation</span></a></li>
+                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquestBooking/create"><i
+                                class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
+                                class="item-name">New banquet Booking</span></a></li>
+                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquetPkg/create"><i
+                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                class="item-name">Banquet Package Creation</span></a></li>
+                </ul>
 
+                <ul class="childNav" data-parent="CallAndPostal">
+                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/dispatch/create"><i
+                                class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
+                                class="item-name">Postal Dispatch</span></a></li>
+                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/postalreceive/create"><i
+                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                class="item-name">Postal Recieve</span></a></li>
+                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/enquiry/create"><i
+                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                class="item-name">Enquiry</span></a></li>
                 </ul>
 
                 <ul class="childNav" data-parent="form">
@@ -586,7 +603,7 @@
                                 aria-hidden="true"></i><span class="item-name">&nbsp;Employee Type</span></a></li>
 
 
-
+                    fron
                     <li class="nav-item"><a href="<?= base_url(); ?>Master/village"><i class="fa-lg fas fa-torii-gate"
                                 aria-hidden="true"></i><span class="item-name">&nbsp;Village</span></a></li>
                 </ul>
@@ -698,6 +715,9 @@
 
                     </ul>
                     <ul class="childNav" data-parent="Frontoffice">
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/Reservation/create"><i
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Reservation</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/RoomStatus/create"><i
                                     class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
                                     class="item-name">Room Status</span></a></li>
@@ -707,6 +727,12 @@
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/postalreceive/create"><i
                                     class="fas fa-times-circle fa-lg animtxt" aria-hidden="true"></i><span
                                     class="item-name">Postal Receive</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/dispatch/create"><i
+                                    class="fas fa-times-circle fa-lg animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Postal Dispatch</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/enquiry/create"><i
+                                    class="fas fa-times-circle fa-lg animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Enquiry</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/Customermsg/create"><i
                                     class="fa fa-lg fa-user-times animtxt" aria-hidden="true"></i><span
                                     class="item-name">Staff/Customer Message</span></a></li>

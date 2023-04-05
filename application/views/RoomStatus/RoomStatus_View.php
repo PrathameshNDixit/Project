@@ -25,7 +25,13 @@
     textarea {
         resize: none;
     }
-    hr { height:2px; border:none; color:black; background-color:black; }
+
+    hr {
+        height: 2px;
+        border: none;
+        color: black;
+        background-color: black;
+    }
 
     .form-group {
         margin-block: 30px;
@@ -368,7 +374,7 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap m-0 d-flex flex-column">
+<div class="main-content-wrap sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb">

@@ -25,7 +25,13 @@
     textarea {
         resize: none;
     }
-    hr { height:2px; border:none; color:black; background-color:black; }
+
+    hr {
+        height: 2px;
+        border: none;
+        color: black;
+        background-color: black;
+    }
 
     .form-group {
         margin-block: 30px;
@@ -368,7 +374,7 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+<div class="main-content-wrap sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb p-3">
@@ -392,7 +398,7 @@
                                     <div>Customer message</div>
                                     <hr>
                                 </div>
-                                
+
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>Sender Name</label>
                                     <input type="text" class="form-control" id="InwardNo" name="InwardNo" required
@@ -434,7 +440,7 @@
                                 }
                                 ?>
                                 <div class="col-md-12 text-right">
-                                    <button class="btn btn-md btn-success btnright text-white" type="button"
+                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 

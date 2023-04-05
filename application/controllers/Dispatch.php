@@ -15,9 +15,9 @@ class Dispatch extends CI_Controller
         // print_r($data);
         // $data['data'] = $this->Model_Branch->select_all();
         $data['data'] = $this->Commonmodel->getAll('postaldispatch');
-        $this->load->view('common/Navbar');
+        $this->load->view('common/header_view');
         $this->load->view('Dispatch/DispatchDetailsView', $data);
-        $this->load->view('common/footer');
+        $this->load->view('common/footer_view');
     }
     public function create()
     {
@@ -32,9 +32,9 @@ class Dispatch extends CI_Controller
         //     $obj = $this->Model_Branch->search($branch_id);
         // }
         // $data['data'] = $obj;
-        $this->load->view('common/Navbar');
+        $this->load->view('common/header_view');
         $this->load->view('Dispatch/DispatchView');
-        $this->load->view('common/footer');
+        $this->load->view('common/footer_view');
     }
     function insertDispatch()
     {
@@ -45,21 +45,21 @@ class Dispatch extends CI_Controller
         $Address = $this->input->post('Address');
         $Place = $this->input->post('Place');
         $OutwardLetterNo = $this->input->post('OutwardLetterNo');
-        $IncommingRefNo=$this->input->post('IncommingRefNo');
-        $IncommingDate=$this->input->post('IncommingDate');
-        $Subject=$this->input->post('Subject');
-        $Remark=$this->input->post('Remark');
+        $IncommingRefNo = $this->input->post('IncommingRefNo');
+        $IncommingDate = $this->input->post('IncommingDate');
+        $Subject = $this->input->post('Subject');
+        $Remark = $this->input->post('Remark');
         $fields = array(
             'Name' => $name,
             'OutwardDate' => $OutwardDate,
             'OutwardNo' => $OutwardNo,
-            'Address'=>$Address,
-            'Place'=>$Place,
-            'OutwardLetterNo'=>$OutwardLetterNo,
-            'IncommingRefNo'=>$IncommingRefNo,
-            'Subject'=>$Subject,
-            'IncommingDate'=>$IncommingDate,
-            'Remark'=>$Remark
+            'Address' => $Address,
+            'Place' => $Place,
+            'OutwardLetterNo' => $OutwardLetterNo,
+            'IncommingRefNo' => $IncommingRefNo,
+            'Subject' => $Subject,
+            'IncommingDate' => $IncommingDate,
+            'Remark' => $Remark
             // 'created_date' => date('Y-m-d H:i:s'),
             // 'created_by' => 1
         );
