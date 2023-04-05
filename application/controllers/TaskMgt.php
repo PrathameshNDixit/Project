@@ -22,7 +22,7 @@ class Taskmgt extends CI_Controller
         // $data['data'] = $this->Model_Branch->select_all();
         //$data['data']=$this->Commonmodel->getAll('branch_master');
         $this->load->view('common/header_view');
-        $this->load->view('Taskmgt/TaskmgtDetailView', $data);
+        $this->load->view('Taskmgt/TaskmgtDetailView');
         // $this->load->view('Branch/Branch_detail',$data);
         $this->load->view('common/footer_view');
     }

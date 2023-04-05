@@ -368,7 +368,7 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+<div class="main-content-wrap  sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb p-3">

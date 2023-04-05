@@ -22,7 +22,7 @@ class postalreceive extends CI_Controller
         // $data['data'] = $this->Model_Branch->select_all();
         $data['data']=$this->Commonmodel->getAll('postalreceivemaster');
         $this->load->view('common/header_view');
-        $this->load->view('postalreceive/postalreceivedetailview', $data);
+        $this->load->view('postalreceive/postalreceivedetailview');
         // $this->load->view('Branch/Branch_detail',$data);
         $this->load->view('common/footer_view');
     }

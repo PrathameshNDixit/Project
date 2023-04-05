@@ -370,12 +370,12 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+<div class="main-content-wrap  sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb p-3">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>New Banquest Booking</h4>
+            <h4>New Banquet Booking</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -391,11 +391,7 @@
 
                             <div class="row p-3">
                                 <div class="col-12 my-heading">
-<<<<<<< HEAD
                                     <div>Booking Banquet</div>
-=======
-                                    <div>Booking Banquest</div>
->>>>>>> f5e6c7bd5f43a752e5e03fdc9a8cc396f896f090
                                     <hr>
                                 </div>
 

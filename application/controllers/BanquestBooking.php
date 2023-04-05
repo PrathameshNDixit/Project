@@ -22,7 +22,7 @@ class BanquestBooking extends CI_Controller
         // $data['data'] = $this->Model_Branch->select_all();
         //$data['data']=$this->Commonmodel->getAll('branch_master');
         $this->load->view('common/header_view');
-        $this->load->view('BanquestBooking/BanquestBookingDetailView', $data);
+        $this->load->view('BanquestBooking/BanquestBookingDetailView');
         // $this->load->view('Branch/Branch_detail',$data);
         $this->load->view('common/footer_view');
     }
