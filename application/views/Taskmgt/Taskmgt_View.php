@@ -25,7 +25,13 @@
     textarea {
         resize: none;
     }
-    hr { height:2px; border:none; color:black; background-color:black; }
+
+    hr {
+        height: 2px;
+        border: none;
+        color: black;
+        background-color: black;
+    }
 
     .form-group {
         margin-block: 30px;
@@ -400,13 +406,14 @@
                                 </div>
                                 <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
                                     <label for="">Employee Name</label>
-                                    <select name="RefType" id="RefType" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
-                                            <!-- <select class="form-control" name="RefType"> -->
-                                            <option value="Ramesh">Ramesh</option>
-                                            <option value="Suresh">Suresh</option>
+                                    <select name="RefType" id="RefType" data-control="select2" data-hide-search="true"
+                                        class="js-states form-control nav selectpicker">
+                                        <!-- <select class="form-control" name="RefType"> -->
+                                        <option value="Ramesh">Ramesh</option>
+                                        <option value="Suresh">Suresh</option>
                                     </select>
                                 </div>
-                                
+
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>Task manage start date</label>
                                     <input type="date" class="form-control" id="InwardNo" name="InwardNo" required
@@ -430,7 +437,7 @@
                                 }
                                 ?>
                                 <div class="col-md-12 text-right">
-                                    <button class="btn btn-md btn-success btnright text-white" type="button"
+                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 

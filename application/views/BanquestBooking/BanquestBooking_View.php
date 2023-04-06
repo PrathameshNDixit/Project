@@ -376,7 +376,7 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+<div class="main-content-wrap sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb p-3">
@@ -562,8 +562,7 @@
                                             <label for="name">Photo</label>
                                             <input type="file" class="form-control form-control-sm" id="photo"
                                                 name="photo" placeholder="image"
-                                                onchange="readimage(this,'profile-img-tag1');"
-                                                value="<?php if (!empty($dataa))
+                                                onchange="readimage(this,'profile-img-tag1');" value="<?php if (!empty($dataa))
                                                     echo $dataa[0]->photo; ?>">
 
                                             <?php if (!empty($dataa[0]->photo)) {
@@ -574,10 +573,9 @@
 
                                             <img src="" id="profile-img-tag1" calss="img-thumbnail"
                                                 style="height: 65px" />
-                                            <input type="hidden" name="hidden_photo"
-                                                value="<?php if (!empty($dataa[0]->photo)) {
-                                                    echo $dataa[0]->photo;
-                                                } ?>">
+                                            <input type="hidden" name="hidden_photo" value="<?php if (!empty($dataa[0]->photo)) {
+                                                echo $dataa[0]->photo;
+                                            } ?>">
                                         </div>
                                     </div>
                                     <div class="col-12">

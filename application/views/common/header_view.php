@@ -476,12 +476,6 @@
                                 Office</span></a>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" data-item="CallAndPostal"><a class="nav-item-hold"
-                            href="<?= base_url() ?>Frontoffice"><img height="25px"
-                                src="<?php echo base_url() ?>Assets\images\phone.png "><span class="nav-text">Call
-                                and Postal</span></a>
-                        <div class="triangle"></div>
-                    </li>
                     <li class="nav-item" data-item="extrakits"><a class="nav-item-hold"
                             href="<?= base_url() ?>Employee"><img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\division.png "><span
@@ -547,18 +541,6 @@
                     <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquetPkg/create"><i
                                 class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
                                 class="item-name">Banquet Package Creation</span></a></li>
-                </ul>
-
-                <ul class="childNav" data-parent="CallAndPostal">
-                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/dispatch/create"><i
-                                class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
-                                class="item-name">Postal Dispatch</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/postalreceive/create"><i
-                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
-                                class="item-name">Postal Recieve</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/enquiry/create"><i
-                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
-                                class="item-name">Enquiry</span></a></li>
                 </ul>
 
                 <ul class="childNav" data-parent="form">
@@ -724,19 +706,21 @@
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/WakeupCall/create"><i
                                     class="fa fa-lg fa-check-square animtxt" aria-hidden="true"></i><span
                                     class="item-name">Wakeup Call</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/postalreceive/create"><i
-                                    class="fas fa-times-circle fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">Postal Receive</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/dispatch/create"><i
-                                    class="fas fa-times-circle fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">Postal Dispatch</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/enquiry/create"><i
-                                    class="fas fa-times-circle fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">Enquiry</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/taskmgt/create"><i
+                                    class="fa fa-lg fa-check-square animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Task Management</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/Customermsg/create"><i
                                     class="fa fa-lg fa-user-times animtxt" aria-hidden="true"></i><span
                                     class="item-name">Staff/Customer Message</span></a></li>
-
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/dispatch/create"><i
+                                    class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Postal Dispatch</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/postalreceive/create"><i
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Postal Recieve</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/enquiry/create"><i
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Enquiry</span></a></li>
                     </ul>
 
                     <!-- <ul class="childNav"  data-parent="forms">
