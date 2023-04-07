@@ -366,7 +366,8 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Gender</h4>
+            <h4>Bank  Information
+</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -382,33 +383,31 @@
                             <div class="row p-3">
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Gender name</label>
-                                    <input type="text" class="form-control" id="GenderName" name="GenderName" required
+                                    <label>Bank Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Bank Name"id="BankName" name="BankName" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->GenderName; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Something name</label>
-                                    <input type="text" class="form-control" id="Something" name="Something" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[1]->Something; ?>" />
+                                            echo $data[0]->BankName; ?>" />
+
                                 </div>
 
+                                
+
+
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    
+                                    <label> Address </label>
+                                    <textarea class="form-control" placeholder="Enter Address" name="Address" id="Address" cols="4" rows="3" value="<?php if (!empty($data))
+                                        echo $data[0]->Address; ?>"></textarea>
+                                </div>
+
+
+
                                 <?php if (!empty($data)) {
-                                    echo "<input name='GenderId' id='GenderId' value='" . $data[0]->GenderId . "' type='hidden' />";
+                                    echo "<input name='BankId' id='BankId' value='" . $data[0]->BankId . "' type='hidden' />";
                                 }
                                 ?>
 
 
-
-                                <!-- <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for=""> Type</label>
-                                    <select name="company_type" id="company_type" data-control="select2"
-                                        data-hide-search="true" class="js-states form-control nav selectpicker">
-                                        <option selected disabled value="0">Marathi</option>
-                                        <option value="1">English</option>
-                                    </select>
-                                </div> -->
                                 <div class="col-md-12 text-right">
                                     <button class="btn btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
@@ -417,6 +416,11 @@
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
                                         id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
                                                 style="color:white;"></i> Edit</button>
+
+
+
+
+
                                 </div>
                             </div>
                         </form>
@@ -427,7 +431,7 @@
 
 
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/gender_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/InventoryBank_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 

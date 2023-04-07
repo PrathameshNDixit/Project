@@ -442,7 +442,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Company</h4>
+            <h4>Bank Branch Information</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -467,18 +467,28 @@
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
                                         <th>Action</td>
-                                        <th>Company Id</th>
-                                        <th>Company Name </th>
-
+                                        <th>Bank Id</th>
+                                        <th>Bank Branch Id</th>
+                                        <th>Bank Branch Short Name</th>
+                                        <th>IFSC Code</th>
+                                        <th>Bank Name</th>
+                                        <th>Address </th>
+                                      
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'Branch/create/' . $data[$i]->CompanyId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
-                                        echo '<td>' . $data[$i]->CompanyId . '</td>';
-                                        echo '<td>' . $data[$i]->CompanyName . '</td>';
+                                        echo '<td><a href="' . base_url() . 'InventoryBankBranch/create/' . $data[$i]->BankId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td>' . $data[$i]->BankId . '</td>';
+                                        echo '<td>' . $data[$i]->BranchName . '</td>';
+                                        echo '<td>' . $data[$i]->BranchShortName . '</td>';
+                                        echo '<td>' . $data[$i]->IFSCCode. '</td>';
+                                        echo '<td>' . $data[$i]->BankName . '</td>';
+                                        echo '<td>' . $data[$i]->Address . '</td>';
+                                       
+                                        
                                         echo '</tr>';
                                     }
                                     ?>
@@ -506,6 +516,7 @@
                 src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
             <script type="text/javascript"
                 src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap3.min.js"></script>
+
 
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
             <script type="text/javascript" src=https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js></script>

@@ -511,14 +511,19 @@
                     <!-- <li class="nav-item" data-item="report"><a class="nav-item-hold" href="#"> <img height="25px" src="<?php echo base_url() ?>Assets\images\logout.png "><span class="nav-text">Report</span></a>
                         <div class="triangle"></div>
                     </li>   -->
-                    <li class="nav-item" data-item="blogs"><a class="nav-item-hold" href="#"><img height="25px"
+                    <li class="nav-item" data-item="HealthClub"><a class="nav-item-hold" href="#"><img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\blogging.png"><span class="nav-text"
-                                style="color:#0161B5">Blogs</span></a>
+                                style="color:#0161B5">Health Club</span></a>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" data-item="website"><a class="nav-item-hold" href="#"><img height="25px"
+                    <li class="nav-item" data-item="InventoryBank"><a class="nav-item-hold" href="#"><img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\web.png"><span class="nav-text"
-                                style="color:#0161B5">Website</span></a>
+                                style="color:#0161B5">Inventory Bank</span></a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" data-item="Banquet"><a class="nav-item-hold" href="#"><img height="25px"
+                                src="<?php echo base_url() ?>Assets\images\web.png"><span class="nav-text"
+                                style="color:#0161B5">Banquet</span></a>
                         <div class="triangle"></div>
                     </li>
 
@@ -637,21 +642,41 @@
                                     class="item-name">&nbsp;&nbsp;DeleteCompany</span></a></li>
                     </ul>
                     <!-- blogs navs -->
-                    <ul class="childNav " data-parent="blogs">
-                        <li class="nav-item"><a href="<?= base_url(); ?>Blogs/create"><i
+                    <ul class="childNav " data-parent="HealthClub">
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/Health/create"><i
                                     class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Create Blog</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Blogs/edit"><i
+                                    class="item-name">&nbsp;&nbsp;Health Feature</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/HealthClub/create"><i
                                     class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Edit Blog</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Blogs/delete"><i
+                                    class="item-name">&nbsp;&nbsp;Health Club Type </span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/HealthDuration/Create"><i
                                     class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Delete Blog</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Blogs/publish"><i
-                                    class="fas fa-building fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Publish Blog</span></a></li>
+                                    class="item-name">&nbsp;&nbsp;Health Club Duration  </span></a></li>
+                       
                     </ul>
                     <!-- end -->
+                    <ul class="childNav " data-parent="InventoryBank">
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/InventoryBank/create"><i
+                                    class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
+                                    class="item-name">&nbsp;&nbsp; Bank</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/InventoryBankBranch/create"><i
+                                    class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
+                                    class="item-name">&nbsp;&nbsp;Bank Branch</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/InvDiscount/Create"><i
+                                    class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
+                                    class="item-name">&nbsp;&nbsp;Discount Type </span></a></li>
+                       
+                    </ul>
+                    <ul class="childNav " data-parent="Banquet">
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/Facility/create"><i
+                                    class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
+                                    class="item-name">&nbsp;&nbsp; Facility Type</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquetEventType/create"><i
+                                    class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
+                                    class="item-name">&nbsp;&nbsp;Event Type</span></a></li>
+                     
+                       
+                    </ul>
                     <ul class="childNav" data-parent="widgets">
                         <li class="nav-item"><a href="<?= base_url(); ?>Opening/create"><i
                                     class="fa-lg fas fa-plus-circle animtxt"></i>&nbsp;&nbsp;Add Opening</span></a></li>

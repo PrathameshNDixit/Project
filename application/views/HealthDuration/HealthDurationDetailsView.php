@@ -442,7 +442,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Taluka</h4>
+            <h4>Health Club Duration Information</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -467,8 +467,10 @@
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
                                         <th>Action</td>
-                                        <th>Taluka Id</th>
-                                        <th>Taluka Name </th>
+                                        <th>Health Duration Id</th>
+                                        <th>Health Club Duration Name</th>
+                                        
+                                        <th> Description</th>
 
                                     </tr>
                                 </thead>
@@ -476,9 +478,13 @@
                                     <?php
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'Taluka/create/' . $data[$i]->TalukaId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
-                                        echo '<td>' . $data[$i]->TalukaId . '</td>';
-                                        echo '<td>' . $data[$i]->TalukaName . '</td>';
+                                        echo '<td><a href="' . base_url() . 'HealthDuration/create/' . $data[$i]->HealthDurationId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td>' . $data[$i]->HealthDurationId. '</td>';
+                                        echo '<td>' . $data[$i]->HealthDurationName . '</td>';
+                                        
+                                        echo '<td>' . $data[$i]->Description. '</td>';
+                                       
+                                        
                                         echo '</tr>';
                                     }
                                     ?>
@@ -506,6 +512,7 @@
                 src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
             <script type="text/javascript"
                 src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap3.min.js"></script>
+
 
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
             <script type="text/javascript" src=https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js></script>

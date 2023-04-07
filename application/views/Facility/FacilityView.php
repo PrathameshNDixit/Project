@@ -130,7 +130,6 @@
 
     }
 
-
     .dt {
         margin-top: -40px;
         margin-bottom: -10px;
@@ -365,8 +364,9 @@
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb">
-            <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Company</h4>
+            <img height="50px" width="350" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
+            <h4>Banquet Facility Information
+</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -382,23 +382,36 @@
                             <div class="row p-3">
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Company name</label>
-                                    <input type="text" class="form-control" id="CompanyName" name="CompanyName" required
+                                    <label>Banquet Facility Name</label>
+                                    <input type="text"placeholder="Enter Banquet Facility Name" class="form-control" id="FacilityName" name="FacilityName" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->CompanyName; ?>" />
+                                            echo $data[0]->FacilityName; ?>" />
+
                                 </div>
+
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Address</label>
-                                    <input type="text" class="form-control" id="Address" name="Address" required
+                                    <label>Facility Rate</label>
+                                    <input type="text" placeholder="0.00"class="form-control" id="FacilityRate" name="FacilityRate" required
                                         value="<?php if (!empty($data))
-                                            echo $data[1]->Address; ?>" />
+                                            echo $data[0]->FacilityRate; ?>" />
+
                                 </div>
-                                
+
+
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    
+                                    <label> Description </label>
+                                    <textarea class="form-control"placeholder="Enter Description" name="Description" id="Description" cols="4" rows="3" value="<?php if (!empty($data))
+                                        echo $data[0]->Description; ?>"></textarea>
+                                </div>
+
+
 
                                 <?php if (!empty($data)) {
-                                    echo "<input name='CompanyId' id='CompanyId' value='" . $data[0]->CompanyId . "' type='hidden' />";
+                                    echo "<input name='FacilityId' id='FacilityId' value='" . $data[0]->FacilityId . "' type='hidden' />";
                                 }
                                 ?>
+
 
                                 <div class="col-md-12 text-right">
                                     <button class="btn btn-md btn-success btnright text-white" type="button"
@@ -408,6 +421,11 @@
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
                                         id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
                                                 style="color:white;"></i> Edit</button>
+
+
+
+
+
                                 </div>
                             </div>
                         </form>
@@ -418,7 +436,7 @@
 
 
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/company_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/facility_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 

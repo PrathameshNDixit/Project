@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+php<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css">
 <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap3.min.css">
@@ -442,7 +442,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Employee</h4>
+            <h4>Bank Information</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -467,23 +467,24 @@
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
                                         <th>Action</td>
-                                        <th>Gender Id</th>
-                                        <th>Email </th>
-                                        <th>Address</th>
-                                        <th>Mobile</th>
+                                        <th>Bank Id</th>
+                                        <th>Bank Name</th>
+                                        <th>Address </th>
+                                      
+
                                     </tr>
                                 </thead>
-
-
                                 <tbody>
                                     <?php
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'Employee/create' . $data[$i]->EmployeeId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
-                                        echo '<td>' . $data[$i]->EmployeeId . '</td>';
-                                        echo '<td>' . $data[$i]->Email . '</td>';
+                                        echo '<td><a href="' . base_url() . 'InventoryBank/create/' . $data[$i]->BankId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td>' . $data[$i]->BankId. '</td>';
+                                        echo '<td>' . $data[$i]->BankName . '</td>';
                                         echo '<td>' . $data[$i]->Address . '</td>';
-                                        echo '<td>' . $data[$i]->PrimaryMobileNumber . '</td>';
+                                        
+                                       
+                                        
                                         echo '</tr>';
                                     }
                                     ?>
@@ -511,6 +512,7 @@
                 src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
             <script type="text/javascript"
                 src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap3.min.js"></script>
+
 
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
             <script type="text/javascript" src=https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js></script>

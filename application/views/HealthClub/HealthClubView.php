@@ -130,7 +130,6 @@
 
     }
 
-
     .dt {
         margin-top: -40px;
         margin-bottom: -10px;
@@ -361,12 +360,13 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap sidenav-open d-flex flex-column">
+<div class="main-content-wrap  d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb">
-            <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Taluka</h4>
+            <img height="50px" width="400px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
+            <h4>Health Club Type Information
+</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -382,25 +382,30 @@
                             <div class="row p-3">
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Taluka name</label>
-                                    <input type="text" class="form-control" id="TalukaName" name="TalukaName" required
+                                    <label>Health Club Type Name</label>
+                                    <input type="text"placeholder="Enter Health Club Type Name" class="form-control" id="HealthClubName" name="HealthClubName" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->TalukaName; ?>" />
+                                            echo $data[0]->HealthClubName; ?>" />
+
                                 </div>
 
+                               
+
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    
+                                    <label> Description </label>
+                                    <textarea class="form-control"placeholder="Enter Description" name="Description" id="Description" cols="4" rows="3" value="<?php if (!empty($data))
+                                        echo $data[0]->Description; ?>"></textarea>
+                                </div>
+
+
+
                                 <?php if (!empty($data)) {
-                                    echo "<input name='GenderId' id='GenderId' value='" . $data[0]->GenderId . "' type='hidden' />";
+                                    echo "<input name='HealthClubId' id='HealthClubId' value='" . $data[0]->HealthClubId . "' type='hidden' />";
                                 }
                                 ?>
 
-                                <!-- <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for=""> Type</label>
-                                    <select name="company_type" id="company_type" data-control="select2"
-                                        data-hide-search="true" class="js-states form-control nav selectpicker">
-                                        <option selected disabled value="0">Marathi</option>
-                                        <option value="1">English</option>
-                                    </select>
-                                </div> -->
+
                                 <div class="col-md-12 text-right">
                                     <button class="btn btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
@@ -409,6 +414,11 @@
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
                                         id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
                                                 style="color:white;"></i> Edit</button>
+
+
+
+
+
                                 </div>
                             </div>
                         </form>
@@ -419,7 +429,7 @@
 
 
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/taluka_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/HealthClub_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 
