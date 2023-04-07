@@ -371,7 +371,11 @@
 
 <!-- =============== Left side End ================-->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="main-content-wrap sidenav-open d-flex flex-column">
+=======
+<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+>>>>>>> b89765c8113219ca39f89d69e3057bbd160d72a4
 =======
 <div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
 >>>>>>> b89765c8113219ca39f89d69e3057bbd160d72a4
