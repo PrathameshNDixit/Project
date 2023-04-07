@@ -12,13 +12,18 @@ $("#btn_save").click(function(){
 
  function saveperform() 
 { 
-    var MainMenuName=$('#MainMenuName').val();
-    var MainMenuDescription=$('#MainMenuDescription').val();
-    
-    var MainMenuId=$('#MainMenuId').val();
+    var HCType=$('#HCType').val();
+    var HCDuration=$('#HCDuration').val();
+    var PackageName=$('#PackageName').val();
+    var Rate=$('#Rate').val();
+    var TraineeCategory=$('#TraineeCategory').val();
+    var Amount=$('#Amount').val();
+    var Features=$('#Features').val();
+   
+    var PackageId=$('#PackageId').val();
 
 
-    if(MainMenuName==""|| MainMenuDescription=="") 
+    if(HCType==""|| HCDuration==""|| PackageName==""|| Rate==""|| TraineeCategory==""|| Amount==""|| Features=="") 
     {
       // alert("requird");
         swal({
@@ -30,7 +35,7 @@ $("#btn_save").click(function(){
 
     else
     {
-      if(MainMenuId>0)
+      if(PackageId>0)
       {
             a=true;
 
@@ -38,7 +43,7 @@ $("#btn_save").click(function(){
             var formData = new FormData(form[0]);
       
         $.ajax({
-        url:base_path+"MainMenu/updateMainMenu",
+        url:base_path+"Package/updatePackage",
         type: "POST",
         data: formData,
         processData: false,
@@ -60,7 +65,7 @@ $("#btn_save").click(function(){
             showConfirmButton: false,
             Descriptionr:10000
         }); a=false;
-            window.location.href = base_path+"MainMenu";
+            window.location.href = base_path+"Package";
           }
       });
       }
@@ -72,7 +77,7 @@ $("#btn_save").click(function(){
       var formData = new FormData(form[0]);
         
         $.ajax({
-        url:base_path+"MainMenu/insertMainMenu",
+        url:base_path+"Package/insertPackage",
         type: "POST",
 
         data: formData,

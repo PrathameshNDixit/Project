@@ -36,8 +36,6 @@
     z-index: 10;
     text-align: left;
 }
-hr{height:2px; border:none; color:black; background-color:black;}
-
 .form-group label{
     position: absolute;
     -webkit-box-sizing: border-box;
@@ -138,12 +136,6 @@ border-radius: 10px;
     margin-top:-40px;
     margin-bottom:-10px;
 }
-
-.my-heading{
-        font-size: 2rem;
-        margin: 30px 0 30px;
-        color: #3f48cc;
-    }
 
 /* Button css */
 .btn-md{
@@ -347,17 +339,23 @@ border-radius: 10px;
 }
 
     </style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<link rel="stylesheet" href="<?php echo base_url() ?>web_resources\dist\css\patti.css">
+
+        
         <!-- =============== Left side End ================-->
-        <div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+        <div class="main-content-wrap sidenav-open d-flex flex-column">
             <!-- ============ Body content start ============= -->
             <div class="main-content">
               <div class="breadcrumb">
-                <img height="50px" width="380px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-                    <!-- <h4>Main Menu Type Information </h4> -->
-                    <!-- <ul>
+                <img height="50px" width="750px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
+                    <h4>Health Club Customer Plan Activation + Transaction Informaton</h4>
+                     <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
-                    </ul> -->
+                    </ul>  -->
                 </div>
                 <div style="margin-top:-10px;" class=" border-top"></div>
                 <div class="row card p-3">
@@ -366,47 +364,101 @@ border-radius: 10px;
                         <div class="bord"><h3></h3>
                         <form id="Form"  action="" method="POST">
                         <div class="row p-3">
-                            <div class="col-12 my-heading">
-                                    <div>Main Menu Type Informaton</div>
+                            <!-- <div class="col-12 my-heading">
+                                    <div>Health Club Customer Plan Activation + Transaction Informaton</div>
                                     <hr>
-                                </div>
+                                </div> -->
+                                <input type="hidden" name="id" id="BookingId" value="<?php if(!empty($dataa[0]->BookingId)){echo $dataa[0]->BookingId;}?>" > 
 
-                                <input type="hidden" name="id" id="MainMenuId" value="<?php if(!empty($dataa[0]->MainMenuId)){echo $dataa[0]->MainMenuId;}?>" > 
+
+                                   <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                                         <label for="">Customer Name</label>
+            <select name="CustomerName" id="CustomerName" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
+                                            
+                                                <option value="">---select---</option>
+                                                <option value="Chief Minister">Chief Minister</option>
+                                                <option value="Prime Minister">Prime Minister</option>
+                                                <option value="President">President</option>
+
+                                        </select>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                        <label for="firstName1">Customer Id</label>
+                                        <input class="form-control" id="CustomerId" type="number" name="CustomerId" placeholder="Enter Customer Id" value="<?php if(!empty($dataa[0]->CustomerId)){echo $dataa[0]->CustomerId;}?>" />
+                                    </div>
+                        </div>
+
+                        <div class="row p-3">
+                            <div style="color:red;"><b>Package Details</b></div>
+                        </div>
 
 
-                                   <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                            <label for="firstName1">Main Menu Type Name</label>
-                                            <input class="form-control" id="MainMenuName" type="text" name="MainMenuName" placeholder="Enter Main Menu Type Name" value="<?php if(!empty($dataa[0]->MainMenuName)){echo $dataa[0]->MainMenuName;}?>" />
+                <div class="row p-3">
+
+                    <input type="hidden" name="id" id="BookingId" value="<?php if(!empty($dataa[0]->BookingId)){echo $dataa[0]->BookingId;}?>" > 
+
+
+                                   <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                                         <label for="">Package Name</label>
+            <select name="PackageName" id="PackageName" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
+                                            
+                                                <option value="MLA">---select---</option>
+                                                <option value="Chief Minister">Chief Minister</option>
+                                                <option value="Prime Minister">Prime Minister</option>
+                                                <option value="President">President</option>
+
+                                        </select>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                        <label for="firstName1">Rate</label>
+                                        <input class="form-control" id="rate" type="number" name="rate" placeholder="0.00" value="<?php if(!empty($dataa[0]->rate)){echo $dataa[0]->rate;}?>" />
                                     </div>
 
                                     <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                         <label for="firstName1">Description</label>
-                                        <textarea class="form-control" id="MainMenuDescription" type="text" name="MainMenuDescription" placeholder="Enter Description" value="<?php if(!empty($dataa[0]->MainMenuDescription)){echo $dataa[0]->MainMenuDescription;}?>"></textarea>
+                                        <textarea class="form-control" id="Description" type="text" name="Description" placeholder="Enter Department Description" value="<?php if(!empty($dataa[0]->Description)){echo $dataa[0]->Description;}?>"></textarea>
                                     </div>
+                        </div>
 
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                        <label for="name">Photo</label>
-                                        <input type="file" class="form-control form-control-sm" id="photo" name="photo" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo; ?>"  >
-                                         
-                                    <?php if(!empty($dataa[0]->photo)){
-                                     ?>
-                        <img src="<?php echo base_url();?>upload/<?php echo $dataa[0]->photo ?>" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px"> 
-                      <?php } ?>
-                            
-                      <img src="" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px" /> 
-                      <input type="hidden" name="hidden_photo" value="<?php if(!empty($dataa[0]->photo)){echo $dataa[0]->photo;} ?>">    
-                  </div>
-                       
-                </div>
+                        <div class="row p-3">
+                            <div class="col-12">
+                                                <button class="btn btn-md btn-success btnright text-white" type="button"
+                                                    name="btn_save" id="addToList2"><i class="nav-icon fa-regular fa-circle-check "></i>Add to List</button>
+                                            </div><br>
+                  
+                                            <div style="color:red;"><b>Package Information</b></div>
+                                            <div class="table-responsive">
+                                                <table class="table col-12 mt-3 p-3 mb-3">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th scope="col">Operation</th>
+                                                            <th scope="col">Package Id</th>
+                                                            <th scope="col">Package Name</th>
+                                                            <th scope="col">Rate</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="mytbody2">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
 
-                                   
+                        <div class="row p-3">
+                            <input type="hidden" name="id" id="BookingId" value="<?php if(!empty($dataa[0]->BookingId)){echo $dataa[0]->BookingId;}?>" >
+                            <div class="col-md-10"></div>
+                            <div class="col-md-2 form-group  mt-0">
+                                        <label for="firstName1">Total Charges Amount</label>
+                                        <input class="form-control" id="amount" type="number" name="amount" value="<?php if(!empty($dataa[0]->amount)){echo $dataa[0]->amount;}?>" />
+                            </div>
 
-                                    
+
 
                                             <div class="col-md-12 text-right">
-                                            <button class="btn btn-md btn-success btnright text-white" type="button" name="btn_save" id="btn_save"><i class="nav-icon fa-regular fa-circle-check "></i> Save</button>
+                                            <button class="btn m-2 btn-md btn-success btnright text-white" type="button" name="btn_save" id="btn_save"><i class="nav-icon fa-regular fa-circle-check "></i> Save</button>
                                            
-                                            <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="<?php echo base_url();?>MainMenu/index" style="color:white;"></i> Edit</button>
+                                            <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="<?php echo base_url();?>Booking/index" style="color:white;"></i> Edit</button>
 
                                         </div>
                                     </div>
@@ -415,10 +467,22 @@ border-radius: 10px;
                         </div>
                     </div>
 </div>
-                  
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+
+<script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/booking.js"></script>
 <script  src="<?php echo base_url('web_resources');?>/dist/js/jquery.min.js"></script>          
-<script  src="<?php echo base_url('web_resources');?>/dist/js/controllers/MainMenu_create.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>                 
+<script  src="<?php echo base_url('web_resources');?>/dist/js/controllers/Booking_create.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>    
+
+
+<script>
+
+
+            $("#company_type").select2({});
+
+        </script>             
    
 

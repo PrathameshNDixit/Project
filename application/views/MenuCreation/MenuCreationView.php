@@ -36,6 +36,8 @@
     z-index: 10;
     text-align: left;
 }
+hr{height:2px; border:none; color:black; background-color:black;}
+
 .form-group label{
     position: absolute;
     -webkit-box-sizing: border-box;
@@ -136,6 +138,12 @@ border-radius: 10px;
     margin-top:-40px;
     margin-bottom:-10px;
 }
+
+.my-heading{
+        font-size: 2rem;
+        margin: 30px 0 30px;
+        color: #3f48cc;
+    }
 
 /* Button css */
 .btn-md{
@@ -340,12 +348,12 @@ border-radius: 10px;
 
     </style>
         <!-- =============== Left side End ================-->
-        <div class="main-content-wrap sidenav-open d-flex flex-column">
+        <div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
             <!-- ============ Body content start ============= -->
             <div class="main-content">
               <div class="breadcrumb">
                 <img height="50px" width="420px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-                    <h4>Banquet Menu Information </h4>
+                    <!-- <h4>Banquet Menu Information </h4> -->
                     <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -358,10 +366,14 @@ border-radius: 10px;
                         <div class="bord"><h3></h3>
                         <form id="Form"  action="" method="POST">
                         <div class="row p-3">
+                            <div class="col-12 my-heading">
+                                    <div>Banquet Menu Informaton</div>
+                                    <hr>
+                                </div>
 
                                 <input type="hidden" name="id" id="MenuCreationId" value="<?php if(!empty($dataa[0]->MenuCreationId)){echo $dataa[0]->MenuCreationId;}?>" > 
 
-                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-2 ">
                                                          <label for="">Main Menu Type</label>
             <select name="MenuType" id="MenuType" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
                                             
@@ -390,7 +402,7 @@ border-radius: 10px;
                                             <input class="form-control" id="MenuName" type="text" name="MenuName" placeholder="Enter Main Menu Type Name" value="<?php if(!empty($dataa[0]->MenuName)){echo $dataa[0]->MenuName;}?>" />
                                     </div>
 
-                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-2 ">
                                                          <label for="">Item Status</label>
             <select name="itemstatus" id="itemstatus" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
                                             
@@ -402,12 +414,12 @@ border-radius: 10px;
                                         </select>
                                         </div> <br><br><br>
 
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label for="firstName1">Rate</label>
                                         <input class="form-control" id="rate" type="number" name="rate" placeholder="0.00" value="<?php if(!empty($dataa[0]->rate)){echo $dataa[0]->rate;}?>" />
                                     </div>
 
-                                    <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                    <div class="form-group custom-dropdown  mt-0 col-lg-2 ">
                                                          <label for="">GST</label>
             <select name="GST" id="GST" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
                                             
@@ -419,7 +431,7 @@ border-radius: 10px;
                                         </select>
                                         </div>
 
-                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label for="name">Main Photo</label>
                                         <input type="file" class="form-control form-control-sm" id="photo" name="photo" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo; ?>"  >
                                          
@@ -432,7 +444,7 @@ border-radius: 10px;
                       <input type="hidden" name="hidden_photo" value="<?php if(!empty($dataa[0]->photo)){echo $dataa[0]->photo;} ?>">    
                   </div>
                        
-                  <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                  <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label for="name">Photo1</label>
                                         <input type="file" class="form-control form-control-sm" id="photo1" name="photo1" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo1; ?>"  >
                                          
@@ -445,7 +457,7 @@ border-radius: 10px;
                       <input type="hidden" name="hidden_photo1" value="<?php if(!empty($dataa[0]->photo1)){echo $dataa[0]->photo1;} ?>">    
                   </div> 
                   <br><br><br><br><br><br>
-                  <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                  <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label for="name">Photo2</label>
                                         <input type="file" class="form-control form-control-sm" id="photo2" name="photo2" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo2; ?>"  >
                                          
@@ -458,7 +470,7 @@ border-radius: 10px;
                       <input type="hidden" name="hidden_photo2" value="<?php if(!empty($dataa[0]->photo2)){echo $dataa[0]->photo2;} ?>">    
                   </div>
 
-                  <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                  <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label for="name">Photo3</label>
                                         <input type="file" class="form-control form-control-sm" id="photo3" name="photo3" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo3; ?>"  >
                                          
@@ -471,7 +483,7 @@ border-radius: 10px;
                       <input type="hidden" name="hidden_photo3" value="<?php if(!empty($dataa[0]->photo3)){echo $dataa[0]->photo3;} ?>">    
                   </div>
 
-                  <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                  <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
                                         <label for="name">Photo4</label>
                                         <input type="file" class="form-control form-control-sm" id="photo4" name="photo4" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo4; ?>"  >
                                          

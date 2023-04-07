@@ -12,13 +12,17 @@ $("#btn_save").click(function(){
 
  function saveperform() 
 { 
-    var MainMenuName=$('#MainMenuName').val();
-    var MainMenuDescription=$('#MainMenuDescription').val();
-    
-    var MainMenuId=$('#MainMenuId').val();
+    var CustomerName=$('#CustomerName').val();
+    var CustomerId=$('#CustomerId').val();
+    var PackageName=$('#PackageName').val();
+    var Rate=$('#Rate').val();
+    var Description=$('#Description').val();
+    var Amount=$('#Amount').val();
+   
+    var BookingId=$('#BookingId').val();
 
 
-    if(MainMenuName==""|| MainMenuDescription=="") 
+    if(CustomerName==""|| CustomerId==""|| PackageName==""|| Rate==""|| Description==""|| Amount=="") 
     {
       // alert("requird");
         swal({
@@ -30,7 +34,7 @@ $("#btn_save").click(function(){
 
     else
     {
-      if(MainMenuId>0)
+      if(BookingId>0)
       {
             a=true;
 
@@ -38,7 +42,7 @@ $("#btn_save").click(function(){
             var formData = new FormData(form[0]);
       
         $.ajax({
-        url:base_path+"MainMenu/updateMainMenu",
+        url:base_path+"Booking/updateBooking",
         type: "POST",
         data: formData,
         processData: false,
@@ -60,7 +64,7 @@ $("#btn_save").click(function(){
             showConfirmButton: false,
             Descriptionr:10000
         }); a=false;
-            window.location.href = base_path+"MainMenu";
+            window.location.href = base_path+"Booking";
           }
       });
       }
@@ -72,7 +76,7 @@ $("#btn_save").click(function(){
       var formData = new FormData(form[0]);
         
         $.ajax({
-        url:base_path+"MainMenu/insertMainMenu",
+        url:base_path+"Booking/insertBooking",
         type: "POST",
 
         data: formData,
