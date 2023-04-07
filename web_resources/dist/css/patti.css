@@ -19,44 +19,18 @@
     flex-wrap: wrap;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
     gap: 10px;
     margin-bottom: 50px;
 }
 
 .mynav-link:hover {
-    background-color: grey;
-    color: white;
-<<<<<<< HEAD
-=======
-}
-
-.hover {
-    background-color: grey;
-    color:white;
     background-color: #90e0ef;
     color: #023e8a;
->>>>>>> b89765c8113219ca39f89d69e3057bbd160d72a4
 }
-
-.hover {
-    background-color: grey;
-    color:white;
-    background-color: #90e0ef;
-    color: black;
-}
-
-/* .hover {
-    background-color: grey;
-    color: white;
-    background-color: #90e0ef;
-    /* color: #023e8a; */
-/* } */ 
 
 .hover {
     background-color: #0077b6;
     color: #ffff;
-
 }
 
 .active {
