@@ -10,6 +10,12 @@
         width: 100%;
         margin: 0;
     }
+    body {
+        background-color: #90e0ef;
+    }
+    .footerHead {
+        font-weight: bold;
+    }
 
     body {
         background-color: #90e0ef;

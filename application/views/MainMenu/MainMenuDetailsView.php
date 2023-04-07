@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css">
 <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
@@ -443,7 +442,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Enquiry</h4>
+            <h4>Add Main Menu</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -462,101 +461,35 @@
                                     <div class="addnewbutton">
                                         <!-- <a href="create"><i class="fas fa-plus-circle animtxt" aria-hidden="true"></i>&nbsp;Add New</a> -->
                                         <button type="button" class=" btn Addnew"><a href="create"><i
-                                                    class="fas fa-plus-circle animtxt" aria-hidden="true"></i>&nbsp;Add
-                                                New</a></button>
+                                                    class="fas fa-plus-circle animtxt" aria-hidden="true"></i>&nbsp;Add New</a></button>
                                     </div>
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
-
-<!-- =============== Left side End ================-->
-<div class="main-content-wrap sidenav-open d-flex flex-column">
-    <!-- ============ Body content start ============= -->
-    <div class="main-content">
-        <div class="breadcrumb d-flex justify-content-end">
-
-            <button class="btn btn-primary " type="button" name="" id="">
-                <a href="<?= base_url() ?>Enquiry/create" class="text-white">Add New</a>
-            </button>
-
-        </div>
-        <div class="separator-breadcrumb border-top"></div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-title mb-3">Form Inputs</div>
-                        <div class="table-responsive">
-                            <table class="display table table-striped table-bordered" id="example" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>O/P</th>
-
                                         <th>Id</th>
-                                        <th>Enquiry Name</th>
-                                        <th>Enquiry Time</th>
-                                        <th>Date</th>
-                                        <th>Reference Type</th>
-                                        <th>Reference Name</th>
-                                        <th>Reference No</th>
-                                        <th>Enquiry Reason</th>
-
-
-
-                                        <!-- <th>code</th> -->
-
-
+                                        <th>Main Menu Type Name</th>
+                                        <th>Description</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'Enquiry/create/' . $data[$i]->EnquiryId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td><a href="' . base_url() . 'MainMenu/create/' . $data[$i]->MainMenuId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
                                        
-                                        echo "<td>".$data[$i]->EnquiryId."</td>";
-                                        echo "<td>".$data[$i]->EnquiryName."</td>";
-                                        echo "<td>".$data[$i]->Date."</td>";
-                                        echo "<td>".$data[$i]->RefType."</td>";
-                                        echo "<td>".$data[$i]->RefName."</td>";
-                                        echo "<td>".$data[$i]->RefNo."</td>";
-                                        echo "<td>".$data[$i]->EnquiryReason."</td>";
+                                        echo "<td>".$data[$i]->MainMenuId."</td>";
+                                        echo "<td>".$data[$i]->MainMenuName."</td>";
+                                        echo "<td>".$data[$i]->Description."</td>";
+                                       
                                         echo '</tr>';
                                     }
                                     ?>
                                 </tbody>
-
-                                    $i = 0;
-                                    foreach ($data as $rw => $value) {
-                                        echo "<tr>";
-                                        echo '<td><a href="' . base_url() . 'Enquiry/update/' . $value->EnquiryId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a> 
-                                  </td>';
-
-                                        echo "<td>" . $value->EnquiryId . "</td>";
-                                        echo "<td>" . $value->EnquiryName . "</td>";
-                                        echo "<td>" . $value->EnquiryTime . "</td>";
-                                        echo "<td>" . $value->Date . "</td>";
-                                        echo "<td>" . $value->RefType . "</td>";
-                                        echo "<td>" . $value->RefName . "</td>";
-                                        echo "<td>" . $value->RefNo . "</td>";
-                                        echo "<td>" . $value->EnquiryReason . "</td>";
-                                        $i++;
-
-
-                                        echo "</tr>";
-                                    }
-                                    ?>
-
-
-                                </tbody>
-
-
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-
 
 
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -622,20 +555,3 @@
                        
                
             
-
-        </div>
-
-
-        <script src="<?php echo base_url(); ?>web_resources/dist/js/jquery.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-
-        <script>
-            $(document).ready(function () {
-
-
-                $('#example').dataTable();
-
-
-            });
-        </script>
-
