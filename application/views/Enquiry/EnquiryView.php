@@ -367,6 +367,74 @@
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
                     </ul> -->
+
+                </div>
+                <div style="margin-top:-10px;" class=" border-top"></div>
+                <div class="row card p-3">
+                    <div class="col-12">
+                        <div class=" p-2">
+                        <div class="bord"><h3></h3>
+                        <form id="Form"  action="" method="POST">
+                        <div class="row p-3">
+
+                                <input type="hidden" name="id" id="EnquiryId" value="<?php if(!empty($dataa[0]->EnquiryId)){echo $dataa[0]->EnquiryId;}?>" > 
+
+
+                                   <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label for="firstName1">Enquiry Name</label>
+                                            <input class="form-control" id="EnquiryName" type="text" name="EnquiryName" value="<?php if(!empty($dataa[0]->EnquiryName)){echo $dataa[0]->EnquiryName;}?>" />
+                                        </div>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label for="firstName1">Enquiry Time</label>
+                                            <input class="form-control" id="EnquiryTime" type="Time" name="EnquiryTime" value="<?php if(!empty($dataa[0]->EnquiryTime)){echo $dataa[0]->EnquiryTime;}?>" />
+                                        </div>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label for="firstName1">Date</label>
+                                            <input class="form-control" id="Date" type="Date" name="Date" value="<?php if(!empty($dataa[0]->Date)){echo $dataa[0]->Date;}?>" />
+                                        </div>
+                                        
+                                        
+                                        <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                                         <label for="">Reference Type</label>
+            <select name="RefType" id="RefType" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
+                                            
+                                                <option value="MLA">MLA</option>
+                                                <option value="Chief Minister">Chief Minister</option>
+                                                <option value="Prime Minister">Prime Minister</option>
+                                                <option value="President">President</option>
+
+                                        </select>
+                                        </div> <br><br><br>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label for="firstName1">Reference Name</label>
+                                            <input class="form-control" id="RefName" type="text" name="RefName" value="<?php if(!empty($dataa[0]->RefName)){echo $dataa[0]->RefName;}?>" />
+                                        </div>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label for="firstName1">Reference No</label>
+                                            <input class="form-control" id="RefNo" type="number" name="RefNo" value="<?php if(!empty($dataa[0]->RefNo)){echo $dataa[0]->RefNo;}?>" />
+                                        </div>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label for="firstName1">Enquiry Reason</label>
+                                            <textarea class="form-control" id="EnquiryReason" type="text" name="EnquiryReason" value="<?php if(!empty($dataa[0]->EnquiryReason)){echo $dataa[0]->EnquiryReason;}?>" ></textarea>
+                                        </div>
+
+
+                                        
+
+
+                                            <div class="col-md-12 text-right">
+                                            <button class="btn btn-md btn-success btnright text-white" type="button" name="btn_save" id="btn_save"><i class="nav-icon fa-regular fa-circle-check "></i> Save</button>
+                                           
+                                            <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="<?php echo base_url();?>Enquiry/index" style="color:white;"></i> Edit</button>
+
+                                        </div>
+                                    </div>
+                                </form>
         </div>
         <div style="margin-top:-10px;" class=" border-top"></div>
         <div class="row card p-3">

@@ -1,6 +1,7 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
 <style>
     .dform-group label {
         position: absolute;
@@ -18,24 +19,22 @@
         text-align: left;
     }
 
-    #ref-date {
-        top: -50px;
+    .fform-group label {
+        position: absolute;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #1273eb;
+        background: #ffffff;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        top: -30px;
+        left: 24px;
+        padding: -1px 7px;
+        z-index: 10;
+        text-align: left;
     }
-
-    textarea {
-        resize: none;
-    }
-
-    hr {
-        height: 2px;
-        border: none;
-        color: black;
-        background-color: black;
-    }
-
-    .form-group {
-        margin-block: 30px;
-    }
+    hr{height:2px; border:none; color:black; background-color:black;}
 
     .form-group label {
         position: absolute;
@@ -138,7 +137,7 @@
         margin-bottom: -10px;
     }
 
-    .my-heading {
+    .my-heading{
         font-size: 2rem;
         margin: 30px 0 30px;
         color: #3f48cc;
@@ -244,12 +243,7 @@
         font-size: 11px;
     }
 
-
-
     @media only screen and (max-width: 768px) {
-        #ref-date {
-            top: -25px;
-        }
 
         .form-group {
             height: 20vh;
@@ -282,7 +276,6 @@
   justify-content: center;
   align-items: center;
   margin: 7px 0 1.25rem;
-
  }
 } */
 
@@ -368,22 +361,25 @@
             inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
     }
 </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<link rel="stylesheet" href="<?php echo base_url() ?>web_resources\dist\css\patti.css">
 
 
 
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap sidenav-open d-flex flex-column">
+<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb">
-            <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Task Management</h4>
-            <!-- <ul>
+            <img height="50px" width="350px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
+            <!-- <h4>Purchase Information</h4>  -->
+             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
-                    </ul> -->
+                    </ul>  -->
         </div>
         <div style="margin-top:-10px;" class=" border-top"></div>
         <div class="row card p-3">
@@ -392,58 +388,100 @@
                     <div class="bord">
                         <h3></h3>
                         <form id="Form" action="" method="POST">
-
                             <div class="row p-3">
                                 <div class="col-12 my-heading">
-                                    <div>Taskmanage Information</div>
+                                    <div>Health Club Customer Plan Activation + Transaction Informaton</div>
                                     <hr>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Task Management Name</label>
-                                    <input type="text" class="form-control" id="InwardNo" name="InwardNo" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->InwardNo; ?>" />
-                                </div>
+
                                 <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for="">Employee Name</label>
-                                    <select name="RefType" id="RefType" data-control="select2" data-hide-search="true"
-                                        class="js-states form-control nav selectpicker">
-                                        <!-- <select class="form-control" name="RefType"> -->
-                                        <option value="Ramesh">Ramesh</option>
-                                        <option value="Suresh">Suresh</option>
+                                    <label for="">Customer Name</label>
+                                    <select name="CustomerName" id="CustomerName" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
+                                            
+                                                <option value="">---select---</option>
+                                                <option value="Chief Minister">Chief Minister</option>
+                                                <option value="Prime Minister">Prime Minister</option>
+                                                <option value="President">President</option>
+
                                     </select>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Task manage start date</label>
-                                    <input type="date" class="form-control" id="InwardNo" name="InwardNo" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->InwardNo; ?>" />
+                                    <label for="firstName1">Customer Id</label>
+                                    <input class="form-control" id="CustomerId" type="number" name="CustomerId" placeholder="Enter Customer Id" value="<?php if(!empty($dataa[0]->CustomerId)){echo $dataa[0]->CustomerId;}?>" />
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Task manage end date</label>
-                                    <input type="date" class="form-control" id="InwardNo" name="InwardNo" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->InwardNo; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Wakeup Message</label>
-                                    <textarea class="form-control" id="Address" name="Address" rows="3" cols="4" value="<?php if (!empty($data))
-                                        echo $data[0]->Address; ?>"></textarea>
-                                </div>
+                            </div>
 
-                                <?php if (!empty($data)) {
-                                    echo "<input name='DispatchId' id='DispatchId' value='" . $data[0]->DispatchId . "' type='hidden' />";
-                                }
-                                ?>
+                        <div class="row p-3">
+                            <div style="color:red;"><b>Package Details</b></div>
+                        </div>
+
+
+                        <div class="row p-3">
+                            <input type="hidden" name="id" id="BookingId" value="<?php if(!empty($dataa[0]->BookingId)){echo $dataa[0]->BookingId;}?>" > 
+
+                            <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                <label for="">Package Name</label>
+                                <select name="PackageName" id="PackageName" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
+                                    <option value="MLA">---select---</option>
+                                    <option value="Chief Minister">Chief Minister</option>
+                                    <option value="Prime Minister">Prime Minister</option>
+                                    <option value="President">President</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                <label for="firstName1">Rate</label>
+                                <input class="form-control" id="rate" type="number" name="rate" placeholder="0.00" value="<?php if(!empty($dataa[0]->rate)){echo $dataa[0]->rate;}?>" />
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                <label for="firstName1">Description</label>
+                                <textarea class="form-control" id="Description" type="text" name="Description" placeholder="Enter Department Description" value="<?php if(!empty($dataa[0]->Description)){echo $dataa[0]->Description;}?>"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row p-3">
+                            <div class="col-12">
+                                <button class="btn btn-md btn-success btnright text-white" type="button"
+                                                    name="btn_save" id="addToList2"><i class="nav-icon fa-regular fa-circle-check "></i>Add to List</button>
+                            </div><br>
+                  
+                                            <div style="color:red;"><b>Package Information</b></div>
+                                            <div class="table-responsive">
+                                                <table class="table col-12 mt-3 p-3 mb-3">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th scope="col">Operation</th>
+                                                            <th scope="col">Package Id</th>
+                                                            <th scope="col">Package Name</th>
+                                                            <th scope="col">Rate</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="mytbody2">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                        <div class="row p-3">
+                            <!-- <input type="hidden" name="id" id="BookingId" value="<?php if(!empty($dataa[0]->BookingId)){echo $dataa[0]->BookingId;}?>" > -->
+                            <div class="col-md-10"></div>
+                            <div class="col-md-2 form-group  mt-0">
+                                        <label for="firstName1">Total Charges Amount</label>
+                                        <input class="form-control" id="amount" type="number" name="amount" value="<?php if(!empty($dataa[0]->amount)){echo $dataa[0]->amount;}?>" />
+                            </div>
+
+                                
+
+
+                                
+
+
                                 <div class="col-md-12 text-right">
-                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button"
-                                        name="btn_save" id="btn_save"><i
-                                            class="nav-icon fa-regular fa-circle-check "></i> Save</button>
+                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button" name="btn_save" id="btn_save"><i class="nav-icon fa-regular fa-circle-check "></i> Save</button> 
 
-                                    <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
-                                        id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
-                                                style="color:white;"></i> Edit</button>
+                                    <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index" style="color:white;"></i> Edit</button>
                                 </div>
                             </div>
                         </form>
@@ -452,10 +490,15 @@
             </div>
         </div>
 
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/booking.js"></script>
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/Taskmgt_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/branch_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+
 
 
         <script>

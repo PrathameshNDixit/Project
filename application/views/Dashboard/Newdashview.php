@@ -17,13 +17,20 @@
             <div class="myhead">Front Office</div>
             <p>All front office</p>
         </div>
-        <div class="mynav-menu-btn"><i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i></div>
-        <div id="menu1" class="mynav-menu">
-            <a class="mynav-menu-link">Home</a>
-            <a href="<?php echo base_url() ?>index.php/reservation/create" class="mynav-menu-link">Reservation</a>
-            <a class="mynav-menu-link">fvgrtg</a>
-            <a class="mynav-menu-link">4tvbrtby</a>
-            <a class="mynav-menu-link">trbrt</a>
+        <div class="mydropdown">
+            <div class="dropbtn">
+                <i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div class="mydropdown-content">
+                <a href="<?= base_url(); ?>index.php/Reservation/create">Reservation</a>
+                <a href="<?= base_url(); ?>index.php/RoomStatus/create">Room Status</a>
+                <a href="<?= base_url(); ?>index.php/WakeupCall/create">Wakeup Call</a>
+                <a href="<?= base_url(); ?>index.php/taskmgt/create">Task Management</a>
+                <a href="<?= base_url(); ?>index.php/Customermsg/create">Staff/Customer Message</a>
+                <a href="<?= base_url(); ?>index.php/dispatch/create">Postal Dispatch</a>
+                <a href="<?= base_url(); ?>index.php/postalrecieve/create">Postal Recieve</a>
+                <a href="<?= base_url(); ?>index.php/enquiry/create">Enquiry</a>
+            </div>
         </div>
     </div>
     <div class="dash-card">
@@ -33,6 +40,19 @@
         <div class="content-container">
             <div class="myhead">Housekeeping</div>
             <p>All House Keeping</p>
+        </div>
+        <div class="mydropdown">
+            <div class="dropbtn">
+                <i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div class="mydropdown-content">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Carrers</a>
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Carrers</a>
+            </div>
         </div>
     </div>
     <div class="dash-card">

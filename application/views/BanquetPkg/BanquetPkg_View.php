@@ -25,7 +25,13 @@
     textarea {
         resize: none;
     }
-    hr { height:2px; border:none; color:black; background-color:black; }
+
+    hr {
+        height: 2px;
+        border: none;
+        color: black;
+        background-color: black;
+    }
 
     .form-group {
         margin-block: 30px;
@@ -370,7 +376,7 @@
 
 
 <!-- =============== Left side End ================-->
-<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+<div class="main-content-wrap sidenav-open d-flex flex-column">
     <!-- ============ Body content start ============= -->
     <div class="main-content">
         <div class="breadcrumb">
@@ -403,32 +409,33 @@
                                 </div>
 
                                 <div class="mynav">
-                                <li class="mynav-link" id="link-1">Facility</li>
-                                <li class="mynav-link" id="link-2">Sitting Plan</li>
-                                <li class="mynav-link" id="link-3">Menu</li>
-                                <!--<li class="mynav-link" id="link-4">Extra Facility</li>
+                                    <li class="mynav-link" id="link-1">Facility</li>
+                                    <li class="mynav-link" id="link-2">Sitting Plan</li>
+                                    <li class="mynav-link" id="link-3">Menu</li>
+                                    <!--<li class="mynav-link" id="link-4">Extra Facility</li>
                                 <li class="mynav-link" id="link-5">Discount Detail</li>
                                 <li class="mynav-link" id="link-6">Payment Detail</li>
                                 <li class="mynav-link" id="link-7">Menu Detail</li>-->
-                            </div>
-                            <div id="div-1" class="mydiv row p-3">
-                                <div class="row p-3">
-                                <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for="">Facility</label>
-                                    <select name="RefType" id="FacilityName" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
-                                            <!-- <select class="form-control" name="RefType"> -->
-                                            <option value="Facility1">Facility1</option>
-                                            <option value="Facility2">Facility 2</option>
-                                    </select>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Facility Rate</label>
-                                    <input type="number" class="form-control" id="FacilityRate" name="InwardNo" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->InwardNo; ?>" />
-                                </div>    
-                                </div>
-                                <div class="col-12">
+                                <div id="div-1" class="mydiv row p-3">
+                                    <div class="row p-3">
+                                        <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                            <label for="">Facility</label>
+                                            <select name="RefType" id="FacilityName" data-control="select2"
+                                                data-hide-search="true" class="js-states form-control nav selectpicker">
+                                                <!-- <select class="form-control" name="RefType"> -->
+                                                <option value="Facility1">Facility1</option>
+                                                <option value="Facility2">Facility 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                            <label>Facility Rate</label>
+                                            <input type="number" class="form-control" id="FacilityRate" name="InwardNo"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->InwardNo; ?>" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
                                         <button class="btn btn-md btn-success btnright text-white" type="button"
                                             name="btn_save" id="addToList"><i
                                                 class="nav-icon fa-regular fa-circle-check "></i>
@@ -447,37 +454,48 @@
                                         <tbody id="mytbody">
                                         </tbody>
                                     </table>
-                            </div>
-                            <div id="div-2" class="mydiv">
-                                <div class="row">
-                                <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for="">Sitting Plan</label>
-                                    <select name="RefType" id="Plan" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
-                                            <!-- <select class="form-control" name="RefType"> -->
-                                            <option value="Meeting Room">Plan1</option>
-                                            <option value="Conference Room">Plan 2</option>
-                                    </select>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Sitting Plan Rate</label>
-                                    <input type="number" class="form-control" id="PlanRate" name="InwardNo" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->InwardNo; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0 divvv divv divvv">
-                        	        <label for="name">Photo</label>
-                                    <input type="file" class="form-control form-control-sm" id="photo" name="photo" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo; ?>"  >
-                                         
-                                    <?php if(!empty($dataa[0]->photo)){
-                                     ?>
-                                     <img src="<?php echo base_url();?>upload/<?php echo $dataa[0]->photo ?>" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px"> 
-                                        <?php } ?>
-                            
-                                        <img src="" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px" /> 
-                                        <input type="hidden" name="hidden_photo" value="<?php if(!empty($dataa[0]->photo)){echo $dataa[0]->photo;} ?>">    
-                                </div>   
-                                </div>
-                                <div class="col-12">
+                                <div id="div-2" class="mydiv">
+                                    <div class="row">
+                                        <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                            <label for="">Sitting Plan</label>
+                                            <select name="RefType" id="Plan" data-control="select2"
+                                                data-hide-search="true" class="js-states form-control nav selectpicker">
+                                                <!-- <select class="form-control" name="RefType"> -->
+                                                <option value="Meeting Room">Plan1</option>
+                                                <option value="Conference Room">Plan 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                            <label>Sitting Plan Rate</label>
+                                            <input type="number" class="form-control" id="PlanRate" name="InwardNo"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->InwardNo; ?>" />
+                                        </div>
+                                        <div
+                                            class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0 divvv divv divvv">
+                                            <label for="name">Photo</label>
+                                            <input type="file" class="form-control form-control-sm" id="photo"
+                                                name="photo" placeholder="image"
+                                                onchange="readimage(this,'profile-img-tag1');"
+                                                value="<?php if (!empty($dataa))
+                                                    echo $dataa[0]->photo; ?>">
+
+                                            <?php if (!empty($dataa[0]->photo)) {
+                                                ?>
+                                                <img src="<?php echo base_url(); ?>upload/<?php echo $dataa[0]->photo ?>"
+                                                    id="profile-img-tag1" calss="img-thumbnail" style="height: 65px">
+                                            <?php } ?>
+
+                                            <img src="" id="profile-img-tag1" calss="img-thumbnail"
+                                                style="height: 65px" />
+                                            <input type="hidden" name="hidden_photo"
+                                                value="<?php if (!empty($dataa[0]->photo)) {
+                                                    echo $dataa[0]->photo;
+                                                } ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
                                         <button class="btn btn-md btn-success btnright text-white" type="button"
                                             name="btn_save" id="addToList2"><i
                                                 class="nav-icon fa-regular fa-circle-check "></i>
@@ -497,37 +515,48 @@
                                         <tbody id="mytbody1">
                                         </tbody>
                                     </table>
-                            </div>
-                            <div id="div-3" class="mydiv">
-                                <div class="row">
-                                <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for="">Menu</label>
-                                    <select name="RefType" id="Menu" data-control="select2" data-hide-search="true" class="js-states form-control nav selectpicker">
-                                            <!-- <select class="form-control" name="RefType"> -->
-                                            <option value="Menu1">Menu 1</option>
-                                            <option value="Menu2">Menu 2</option>
-                                    </select>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Menu Rate</label>
-                                    <input type="number" class="form-control" id="MenuRate" name="InwardNo" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->InwardNo; ?>" />
-                                </div> 
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0 divvv divv divvv">
-                        	        <label for="name">Photo</label>
-                                    <input type="file" class="form-control form-control-sm" id="photo" name="photo" placeholder="image" onchange="readimage(this,'profile-img-tag1');" value="<?php if(!empty($dataa))echo $dataa[0]->photo; ?>"  >
-                                         
-                                    <?php if(!empty($dataa[0]->photo)){
-                                     ?>
-                                     <img src="<?php echo base_url();?>upload/<?php echo $dataa[0]->photo ?>" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px"> 
-                                        <?php } ?>
-                            
-                                        <img src="" id="profile-img-tag1" calss="img-thumbnail" style="height: 65px" /> 
-                                        <input type="hidden" name="hidden_photo" value="<?php if(!empty($dataa[0]->photo)){echo $dataa[0]->photo;} ?>">    
-                                </div>
-                                </div>
-                                <div class="col-12">
+                                <div id="div-3" class="mydiv">
+                                    <div class="row">
+                                        <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                            <label for="">Menu</label>
+                                            <select name="RefType" id="Menu" data-control="select2"
+                                                data-hide-search="true" class="js-states form-control nav selectpicker">
+                                                <!-- <select class="form-control" name="RefType"> -->
+                                                <option value="Menu1">Menu 1</option>
+                                                <option value="Menu2">Menu 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
+                                            <label>Menu Rate</label>
+                                            <input type="number" class="form-control" id="MenuRate" name="InwardNo"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->InwardNo; ?>" />
+                                        </div>
+                                        <div
+                                            class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0 divvv divv divvv">
+                                            <label for="name">Photo</label>
+                                            <input type="file" class="form-control form-control-sm" id="photo"
+                                                name="photo" placeholder="image"
+                                                onchange="readimage(this,'profile-img-tag1');"
+                                                value="<?php if (!empty($dataa))
+                                                    echo $dataa[0]->photo; ?>">
+
+                                            <?php if (!empty($dataa[0]->photo)) {
+                                                ?>
+                                                <img src="<?php echo base_url(); ?>upload/<?php echo $dataa[0]->photo ?>"
+                                                    id="profile-img-tag1" calss="img-thumbnail" style="height: 65px">
+                                            <?php } ?>
+
+                                            <img src="" id="profile-img-tag1" calss="img-thumbnail"
+                                                style="height: 65px" />
+                                            <input type="hidden" name="hidden_photo"
+                                                value="<?php if (!empty($dataa[0]->photo)) {
+                                                    echo $dataa[0]->photo;
+                                                } ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
                                         <button class="btn btn-md btn-success btnright text-white" type="button"
                                             name="btn_save" id="addToList3"><i
                                                 class="nav-icon fa-regular fa-circle-check "></i>
@@ -546,7 +575,7 @@
                                         <tbody id="mytbody2">
                                         </tbody>
                                     </table>
-                            </div>
+                                </div>
                                 <?php if (!empty($data)) {
                                     echo "<input name='DispatchId' id='DispatchId' value='" . $data[0]->DispatchId . "' type='hidden' />";
                                 }
