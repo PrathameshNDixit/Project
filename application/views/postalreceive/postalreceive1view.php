@@ -400,8 +400,8 @@
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>Inward date</label>
-                                    <input type="date" class="form-control" id="InwardDate"
-                                        name="InwardDate" required value="<?php if (!empty($data))
+                                    <input type="date" class="form-control" id="InwardDate" name="InwardDate" required
+                                        value="<?php if (!empty($data))
                                             echo $data[0]->InwardDate; ?>" />
                                 </div>
 
@@ -410,8 +410,9 @@
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" id="InwardName" name="InwardName" required value="<?php if (!empty($data))
-                                        echo $data[0]->InwardName; ?>" />
+                                    <input type="text" class="form-control" id="InwardName" name="InwardName" required
+                                        value="<?php if (!empty($data))
+                                            echo $data[0]->InwardName; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
                                     <label>Address</label>
@@ -458,7 +459,7 @@
                                 }
                                 ?>
                                 <div class="col-md-12 text-right">
-                                    <button class="btn btn-md btn-success btnright text-white" type="button"
+                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 

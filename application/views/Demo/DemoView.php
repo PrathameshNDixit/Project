@@ -1,6 +1,7 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
 <style>
     .dform-group label {
         position: absolute;
@@ -18,16 +19,20 @@
         text-align: left;
     }
 
-    #ref-date {
-        top: -50px;
-    }
-
-    textarea {
-        resize: none;
-    }
-
-    .form-group {
-        margin-block: 30px;
+    .fform-group label {
+        position: absolute;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #1273eb;
+        background: #ffffff;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        top: -30px;
+        left: 24px;
+        padding: -1px 7px;
+        z-index: 10;
+        text-align: left;
     }
 
     .form-group label {
@@ -131,12 +136,6 @@
         margin-bottom: -10px;
     }
 
-    .my-heading {
-        font-size: 2rem;
-        margin: 30px 0 50px;
-        color: #3f48cc;
-    }
-
     /* Button css */
     .btn-md {
         font-size: 17px;
@@ -237,12 +236,7 @@
         font-size: 11px;
     }
 
-
-
     @media only screen and (max-width: 768px) {
-        #ref-date {
-            top: -25px;
-        }
 
         .form-group {
             height: 20vh;
@@ -361,6 +355,9 @@
             inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
     }
 </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<link rel="stylesheet" href="<?php echo base_url() ?>web_resources\dist\css\patti.css">
 
 
 
@@ -372,7 +369,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Postal Dispatch</h4>
+            <h4>Add Company</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -385,94 +382,99 @@
                     <div class="bord">
                         <h3></h3>
                         <form id="Form" action="" method="POST">
-
                             <div class="row p-3">
-                                <div class="col-12 my-heading">
-                                    <div>Outward Letter Transaction Information</div>
-                                </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Outward Number*</label>
-                                    <input type="number" class="form-control" id="OutwardNo" name="OutwardNo" required
+                                    <label>Branch name</label>
+                                    <input type="text" class="form-control" id="branch_name" name="branch_name" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->OutwardNo; ?>" />
-                                </div>
+                                            echo $data[0]->branch_name; ?>" />
 
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Outward Letter No*</label>
-                                    <input type="number" class="form-control" id="OutwardLetterNo"
-                                        name="OutwardLetterNo" required value="<?php if (!empty($data))
-                                            echo $data[0]->OutwardLetterNo; ?>" />
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>OutwardDate</label>
-                                    <input type="date" class="form-control" id="OutwardDate" name="OutwardDate" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->OutwardDate; ?>" />
-                                </div>
-
-
-
-                                <div class="col-12 my-heading">
-                                    <div>To Whom Correspondance</div>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" id="Name" name="Name" required value="<?php if (!empty($data))
-                                        echo $data[0]->Name; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Address</label>
-                                    <textarea class="form-control" id="Address" name="Address" rows="3" cols="4" value="<?php if (!empty($data))
-                                        echo $data[0]->Address; ?>"></textarea>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Place*</label>
-                                    <input type="text" class="form-control" id="Place" name="Place" required value="<?php if (!empty($data))
-                                        echo $data[0]->Place; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Incomming Reference Number</label>
-                                    <input type="text" class="form-control" id="IncommingRefNo" name="IncommingRefNo"
-                                        required value="<?php if (!empty($data))
-                                            echo $data[0]->IncommingRefNo; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label id="ref-date">Incomming Date for Reference</label>
-                                    <input type="date" class="form-control" id="IncommingDate" name="IncommingDate"
-                                        required value="<?php if (!empty($data))
-                                            echo $data[0]->IncommingDate; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                    <label>Subject*</label>
-                                    <textarea class="form-control" name="Subject" id="Subject" cols="4" rows="4" value="<?php if (!empty($data))
-                                        echo $data[0]->Subject; ?>"></textarea>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                    <label>Remark</label>
-                                    <textarea class="form-control" name="Remark" id="Remark" cols="4" rows="3" value="<?php if (!empty($data))
-                                        echo $data[0]->Remark; ?>"></textarea>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Postal Charges</label>
-                                    <input type="number" class="form-control" id="PostalCharges" name="PostalCharges"
-                                        required value="<?php if (!empty($data))
-                                            echo $data[0]->PostalCharges; ?>" />
-                                </div>
-
 
                                 <?php if (!empty($data)) {
-                                    echo "<input name='DispatchId' id='DispatchId' value='" . $data[0]->DispatchId . "' type='hidden' />";
+                                    echo "<input name='branch_id' id='branch_id' value='" . $data[0]->branch_id . "' type='hidden' />";
                                 }
                                 ?>
+
+
+
+                                <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                    <label for=""> Type</label>
+                                    <select name="company_type" id="company_type" data-control="select2"
+                                        data-hide-search="true" class="js-states form-control nav selectpicker">
+                                        <option selected disabled value="0">Marathi</option>
+                                        <option value="1">English</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="mynav">
+                                    <li class="mynav-link" id="link-1">Home</li>
+                                    <li class="mynav-link" id="link-2">About</li>
+                                    <li class="mynav-link" id="link-3">Carreers</li>
+                                </div>
+                                <div id="div-1" class="mydiv p-0">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="div-2" class="mydiv">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                            <label>Branch name</label>
+                                            <input type="text" class="form-control" id="branch_name" name="branch_name"
+                                                required value="<?php if (!empty($data))
+                                                    echo $data[0]->branch_name; ?>" />
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
                                 <div class="col-md-12 text-right">
-                                    <button class="btn m-2 btn-md btn-success btnright text-white" type="button"
+                                    <button class="btn btn-md btn-success btnright text-white" type="button"
                                         name="btn_save" id="btn_save"><i
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
                                         id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
                                                 style="color:white;"></i> Edit</button>
+
+
+
+
+
                                 </div>
                             </div>
                         </form>
@@ -481,10 +483,15 @@
             </div>
         </div>
 
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/patti.js"></script>
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/dispatch_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/branch_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+
 
 
         <script>

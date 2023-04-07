@@ -307,6 +307,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>web_resources/dist/css/sweetalert.css">
     <link rel="stylesheet" href="<?= base_url(); ?>Assets/fontawsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
 
     <script>
@@ -462,15 +464,16 @@
         <div class="side-content-wrap">
             <div class="sidebar-left open rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
                 <ul class="navigation-left">
-                    <li class="nav-item"><a class="nav-item-hold" href="<?= base_url() ?>Dashboard"><img height="25px"
-                                src="<?php echo base_url() ?>Assets\images\dashboard.png "><span
+                    <li class="nav-item"><a class="nav-item-hold" href="<?= base_url() ?>index.php\newdash"><img
+                                height="25px" src="<?php echo base_url() ?>Assets\images\dashboard.png "><span
                                 class="nav-text">Dashboard</span></a>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" data-item="student"><a class="nav-item-hold"
-                            href="<?= base_url() ?>Student"><img height="25px"
-                                src="<?php echo base_url() ?>Assets\images\student.png "><span
-                                class="nav-text">Student</span></a>
+                    <li class="nav-item" data-item="Frontoffice"><a class="nav-item-hold"
+                            href="<?= base_url() ?>Frontoffice"><img height="25px"
+                                src="<?php echo base_url() ?>Assets\images\office-building.png "><span
+                                class="nav-text">Front
+                                Office</span></a>
                         <div class="triangle"></div>
                     </li>
                     <li class="nav-item" data-item="extrakits"><a class="nav-item-hold"
@@ -498,10 +501,11 @@
                                 class="nav-text">Health Club</span></a>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" data-item="forms"><a class="nav-item-hold" href="#"> <img height="25px"
+                    <li class="nav-item" data-item="banquet"><a class="nav-item-hold" href="#"> <img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\programming.png "><span
-                                class="nav-text">Master</span></a>
+                                class="nav-text">Banquet</span></a>
                         <div class="triangle"></div>
+
                     <li class="nav-item" data-item="form"><a class="nav-item-hold" href="#"> <img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\programming.png "><span
                                 class="nav-text">Master1</span></a>
@@ -512,9 +516,6 @@
                                 class="nav-text">Report</span></a>
                         <div class="triangle"></div>
                     </li>
-                    <!-- <li class="nav-item" data-item="report"><a class="nav-item-hold" href="#"> <img height="25px" src="<?php echo base_url() ?>Assets\images\logout.png "><span class="nav-text">Report</span></a>
-                        <div class="triangle"></div>
-                    </li>   -->
                     <li class="nav-item" data-item="blogs"><a class="nav-item-hold" href="#"><img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\blogging.png"><span class="nav-text"
                                 style="color:#0161B5">Blogs</span></a>
@@ -537,46 +538,13 @@
                     <li class="nav-item"><a href="<?= base_url(); ?>dashboard3.html"><i class=" nav-icon nav-icon i-Over-Time"></i><span class="item-name">Verify Student</span></a></li>
                     <li class="nav-item"><a href="<?= base_url(); ?>dashboard4.html"><i class=" nav-icon nav-icon i-Clock"></i><span class="item-name">Unverify student</span></a></li>
                 </ul> -->
-                <ul class="childNav" data-parent="forms">
-                    <li class="nav-item"><i><b>Student Module Masters</b></i></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/religion"><i class="fa-lg fas fa-gopuram"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;religion</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/caste"><i
-                                class="fa-lg fab fa-fort-awesome-alt" aria-hidden="true"></i><span
-                                class="item-name">&nbsp;Cast</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/subcaste"><i class="fa-lg fab fa-sellcast"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;SubCast</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/applied"><i
-                                class="fa-lg fas fa-user-graduate" aria-hidden="true"></i><span
-                                class="item-name">&nbsp;Applied</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/qualification"><i
-                                class="fa-lg fas fa-user-graduate" aria-hidden="true"></i><span
-                                class="item-name">&nbsp;Qualification</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/department"><i class="fa-lg fa fa-id-badge"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;Deparment</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/branch"><i
-                                class="fa-lg fas fa-map-marked-alt" aria-hidden="true"></i><span
-                                class="item-name">&nbsp; Branch</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/degree"><i
-                                class="fa-lg fas fa-graduation-cap" aria-hidden="true"></i><span
-                                class="item-name">&nbsp;Degree</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/Masteredu"><i
-                                class="fa-lg fas fa-graduation-cap" aria-hidden="true"></i><span
-                                class="item-name">&nbsp;Masteredu</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/country"><i class="fa-lg  fa fa-globe"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;Country</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/state"><i class="fa-lg fa fa-building"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;State</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/city"><i class="fa-lg fas fa-city"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;City</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/hobbies"><i class="fa-lg fab fa-slack"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;Hobbies</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/skills"><i class="fa-lg fas fa-award"
-                                aria-hidden="true"></i><span class="item-name">&nbsp;Skill</span></a></li>
-                    <li class="nav-item"><a href="<?= base_url(); ?>Master/certification"><i
-                                class="fa-lg fas fa-certificate" aria-hidden="true"></i><span
-                                class="item-name">&nbsp;Certification</span></a></li>
-
+                <ul class="childNav" data-parent="banquet">
+                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquestBooking/create"><i
+                                class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
+                                class="item-name">New banquet Booking</span></a></li>
+                    <li class="nav-item"><a href="<?= base_url(); ?>index.php/BanquetPkg/create"><i
+                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                class="item-name">Banquet Package Creation</span></a></li>
                 </ul>
 
                 <ul class="childNav" data-parent="form">
@@ -621,7 +589,7 @@
                                 aria-hidden="true"></i><span class="item-name">&nbsp;Employee Type</span></a></li>
 
 
-
+                    fron
                     <li class="nav-item"><a href="<?= base_url(); ?>Master/village"><i class="fa-lg fas fa-torii-gate"
                                 aria-hidden="true"></i><span class="item-name">&nbsp;Village</span></a></li>
                 </ul>
@@ -766,28 +734,31 @@
                                     class="item-name">&nbsp;Report</span></a></li>
 
                     </ul>
-                    <ul class="childNav" data-parent="student">
-                        <li class="nav-item"><a href="<?= base_url(); ?>Studentregistration/create"><i
-                                    class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Student&nbsp;Create</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Studentregistration/edit"><i
+                    <ul class="childNav" data-parent="Frontoffice">
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/Reservation/create"><i
                                     class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Student&nbsp;Edit</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Studentregistration/verify"><i
+                                    class="item-name">Reservation</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/RoomStatus/create"><i
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Room Status</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/WakeupCall/create"><i
                                     class="fa fa-lg fa-check-square animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Verify&nbsp;Student</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Studentregistration/unverify"><i
-                                    class="fas fa-times-circle fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Unverify&nbsp;Student</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Studentregistration/delete"><i
+                                    class="item-name">Wakeup Call</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/taskmgt/create"><i
+                                    class="fa fa-lg fa-check-square animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Task Management</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/Customermsg/create"><i
                                     class="fa fa-lg fa-user-times animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Delete&nbsp;Student</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Studentregistration/RegistrationDeactivated"><i
-                                    class="fa fa-lg fa-user-times animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Deactivat&nbsp;Student</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Studentregistration/report"><i
-                                    class="fas fa-file-alt  fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;Report</span></a></li>
+                                    class="item-name">Staff/Customer Message</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/dispatch/create"><i
+                                    class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Postal Dispatch</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/postalreceive/create"><i
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Postal Recieve</span></a></li>
+                        <li class="nav-item"><a href="<?= base_url(); ?>index.php/enquiry/create"><i
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Enquiry</span></a></li>
                     </ul>
 
                     <!-- <ul class="childNav"  data-parent="forms">

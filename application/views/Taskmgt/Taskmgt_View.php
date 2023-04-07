@@ -26,6 +26,13 @@
         resize: none;
     }
 
+    hr {
+        height: 2px;
+        border: none;
+        color: black;
+        background-color: black;
+    }
+
     .form-group {
         margin-block: 30px;
     }
@@ -133,7 +140,7 @@
 
     .my-heading {
         font-size: 2rem;
-        margin: 30px 0 50px;
+        margin: 30px 0 30px;
         color: #3f48cc;
     }
 
@@ -372,7 +379,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Postal Dispatch</h4>
+            <h4>Task Management</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -388,78 +395,42 @@
 
                             <div class="row p-3">
                                 <div class="col-12 my-heading">
-                                    <div>Outward Letter Transaction Information</div>
+                                    <div>Taskmanage Information</div>
+                                    <hr>
                                 </div>
-
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Outward Number*</label>
-                                    <input type="number" class="form-control" id="OutwardNo" name="OutwardNo" required
+                                    <label>Task Management Name</label>
+                                    <input type="text" class="form-control" id="InwardNo" name="InwardNo" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->OutwardNo; ?>" />
+                                            echo $data[0]->InwardNo; ?>" />
+                                </div>
+                                <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
+                                    <label for="">Employee Name</label>
+                                    <select name="RefType" id="RefType" data-control="select2" data-hide-search="true"
+                                        class="js-states form-control nav selectpicker">
+                                        <!-- <select class="form-control" name="RefType"> -->
+                                        <option value="Ramesh">Ramesh</option>
+                                        <option value="Suresh">Suresh</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Outward Letter No*</label>
-                                    <input type="number" class="form-control" id="OutwardLetterNo"
-                                        name="OutwardLetterNo" required value="<?php if (!empty($data))
-                                            echo $data[0]->OutwardLetterNo; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>OutwardDate</label>
-                                    <input type="date" class="form-control" id="OutwardDate" name="OutwardDate" required
+                                    <label>Task manage start date</label>
+                                    <input type="date" class="form-control" id="InwardNo" name="InwardNo" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->OutwardDate; ?>" />
-                                </div>
-
-
-
-                                <div class="col-12 my-heading">
-                                    <div>To Whom Correspondance</div>
+                                            echo $data[0]->InwardNo; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" id="Name" name="Name" required value="<?php if (!empty($data))
-                                        echo $data[0]->Name; ?>" />
+                                    <label>Task manage end date</label>
+                                    <input type="date" class="form-control" id="InwardNo" name="InwardNo" required
+                                        value="<?php if (!empty($data))
+                                            echo $data[0]->InwardNo; ?>" />
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Address</label>
+                                    <label>Wakeup Message</label>
                                     <textarea class="form-control" id="Address" name="Address" rows="3" cols="4" value="<?php if (!empty($data))
                                         echo $data[0]->Address; ?>"></textarea>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Place*</label>
-                                    <input type="text" class="form-control" id="Place" name="Place" required value="<?php if (!empty($data))
-                                        echo $data[0]->Place; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Incomming Reference Number</label>
-                                    <input type="text" class="form-control" id="IncommingRefNo" name="IncommingRefNo"
-                                        required value="<?php if (!empty($data))
-                                            echo $data[0]->IncommingRefNo; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label id="ref-date">Incomming Date for Reference</label>
-                                    <input type="date" class="form-control" id="IncommingDate" name="IncommingDate"
-                                        required value="<?php if (!empty($data))
-                                            echo $data[0]->IncommingDate; ?>" />
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                    <label>Subject*</label>
-                                    <textarea class="form-control" name="Subject" id="Subject" cols="4" rows="4" value="<?php if (!empty($data))
-                                        echo $data[0]->Subject; ?>"></textarea>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  form-group  mt-0">
-                                    <label>Remark</label>
-                                    <textarea class="form-control" name="Remark" id="Remark" cols="4" rows="3" value="<?php if (!empty($data))
-                                        echo $data[0]->Remark; ?>"></textarea>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2  form-group  mt-0">
-                                    <label>Postal Charges</label>
-                                    <input type="number" class="form-control" id="PostalCharges" name="PostalCharges"
-                                        required value="<?php if (!empty($data))
-                                            echo $data[0]->PostalCharges; ?>" />
-                                </div>
-
 
                                 <?php if (!empty($data)) {
                                     echo "<input name='DispatchId' id='DispatchId' value='" . $data[0]->DispatchId . "' type='hidden' />";
@@ -483,7 +454,7 @@
 
 
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/dispatch_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/Taskmgt_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 
