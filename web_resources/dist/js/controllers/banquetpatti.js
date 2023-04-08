@@ -22,7 +22,9 @@ links.forEach(element => {
 
 
 let addbtn = document.getElementById("addToList");
+let output1=document.getElementById("output");
 let count=0;
+let total=0;
 addbtn.addEventListener("click",()=> {
     //const FacilityId = document.getElementById("FacilityId").value;
     const FacilityName = document.getElementById("FacilityName").value;
@@ -43,11 +45,13 @@ addbtn.addEventListener("click",()=> {
     tr.appendChild(td1);
     tr.appendChild(td2);
     tbody.appendChild(tr);
+    total+=Number(FacilityRate);
+    output1.value=total;
 });
 
 let addbtn2 = document.getElementById("addToList2");
-let output=document.getElementById("output");
-let total=0;
+let output=document.getElementById("output1");
+let total1=0;
 let count2=0;
 addbtn2.addEventListener("click",()=> {
     const Plan = document.getElementById("Plan").value;
@@ -67,11 +71,13 @@ addbtn2.addEventListener("click",()=> {
     tr.appendChild(td1);
     tr.appendChild(td2);
     tbody.appendChild(tr);
-    total+=Number(rate);
-    output.value=total;
+    total1+=Number(rate);
+    output.value=total1;
 });
 
 let addbtn3 = document.getElementById("addToList3");
+let output2=document.getElementById("output2");
+let total2=0;
 let count3=0;
 addbtn3.addEventListener("click",()=> {
     const MenuName = document.getElementById("Menu").value;
@@ -91,8 +97,8 @@ addbtn3.addEventListener("click",()=> {
     tr.appendChild(td1);
     tr.appendChild(td2);
     tbody.appendChild(tr);
-    total+=Number(rate);
-    output.value=total;
+    total2+=Number(MenuRate);
+    output2.value=total2;
 });
 
 /*let addbtn4 = document.getElementById("addToList4");

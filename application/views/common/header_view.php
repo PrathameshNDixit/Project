@@ -475,10 +475,10 @@
                         <div class="triangle"></div>
                         
                     </li>
-                    <li class="nav-item" data-item="extrakits"><a class="nav-item-hold"
+                    <li class="nav-item" data-item="HR"><a class="nav-item-hold"
                             href="<?= base_url() ?>Employee"><img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\division.png "><span
-                                class="nav-text">Employee</span></a>
+                                class="nav-text">HR management</span></a>
                         <div class="triangle"></div>
                     </li>
                     <li class="nav-item" data-item="apps"><a class="nav-item-hold" href="<?= base_url() ?>Company"><img
@@ -596,10 +596,10 @@
                     <!-- Sidebar -->
 
 
-                    <ul class="childNav " data-parent="apps">
+                    <ul class="childNav " data-parent="HR">
                         <li class="nav-item"><a href="<?= base_url(); ?>Company/create"><i
                                     class=" fa fa-lg fa-building animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;AddCompany</span></a></li>
+                                    class="item-name">HR management</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>Company/edit"><i
                                     class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
                                     class="item-name">&nbsp;&nbsp;EditCompany</span></a></li>

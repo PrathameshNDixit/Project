@@ -528,6 +528,11 @@
                                         <tbody id="mytbody">
                                         </tbody>
                                     </table>
+                                    <div class="input-group mb-3 col-2 ml-auto">
+                                        <input type="text" id="output" placeholder="Total" class="input ms-auto" style="width:100px;
+                                            padding:5px 7px;
+                                            border-radius:10px;">
+                                    </div>
                             </div>
                             <div id="div-2" class="mydiv">
                                 <div class="row">
@@ -578,6 +583,11 @@
                                         <tbody id="mytbody1">
                                         </tbody>
                                     </table>
+                                    <div class="input-group mb-3 col-2 ml-auto">
+                                        <input type="text" id="output1" placeholder="Total" class="input ms-auto" style="width:100px;
+                                            padding:5px 7px;
+                                            border-radius:10px;">
+                                    </div>
                             </div>
                             <div id="div-3" class="mydiv">
                                 <div class="row">
@@ -615,6 +625,11 @@
                                         <tbody id="mytbody2">
                                         </tbody>
                                     </table>
+                                    <div class="input-group mb-3 col-2 ml-auto">
+                                        <input type="text" id="output2" placeholder="Total" class="input ms-auto" style="width:100px;
+                                            padding:5px 7px;
+                                            border-radius:10px;">
+                                    </div>
                             </div>
                                 <?php if (!empty($data)) {
                                     echo "<input name='DispatchId' id='DispatchId' value='" . $data[0]->DispatchId . "' type='hidden' />";
