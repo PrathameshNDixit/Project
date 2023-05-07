@@ -348,16 +348,18 @@ border-radius: 10px;
 
     </style>
         <!-- =============== Left side End ================-->
-        <div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
+        <div class="main-content-wrap sidenav-open d-flex flex-column">
             <!-- ============ Body content start ============= -->
             <div class="main-content">
-              <div class="breadcrumb">
-                <img height="50px" width="420px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-                    <!-- <h4>Banquet Menu Information </h4> -->
-                    <!-- <ul>
-                        <li><a href="href.html">Form</a></li>
-                        <li>Basic</li>
-                    </ul> -->
+                <div class="p-3">
+                    <div class="breadcrumb">
+                        <img height="50px" width="420px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
+                        <h4>Banquet Menu Information </h4>
+                            <!-- <ul>
+                                <li><a href="href.html">Form</a></li>
+                                <li>Basic</li>
+                            </ul> -->
+                    </div>
                 </div>
                 <div style="margin-top:-10px;" class=" border-top"></div>
                 <div class="row card p-3">
@@ -366,10 +368,10 @@ border-radius: 10px;
                         <div class="bord"><h3></h3>
                         <form id="Form"  action="" method="POST">
                         <div class="row p-3">
-                            <div class="col-12 my-heading">
+                            <!-- <div class="col-12 my-heading">
                                     <div>Banquet Menu Informaton</div>
                                     <hr>
-                                </div>
+                                </div> -->
 
                                 <input type="hidden" name="id" id="MenuCreationId" value="<?php if(!empty($dataa[0]->MenuCreationId)){echo $dataa[0]->MenuCreationId;}?>" > 
 
@@ -502,7 +504,7 @@ border-radius: 10px;
                                     
 
                                             <div class="col-md-12 text-right">
-                                            <button class="btn btn-md btn-success btnright text-white" type="button" name="btn_save" id="btn_save"><i class="nav-icon fa-regular fa-circle-check "></i> Save</button>
+                                            <button class="btn m-2 btn-md btn-success btnright text-white" type="button" name="btn_save" id="btn_save"><i class="nav-icon fa-regular fa-circle-check "></i> Save</button>
                                            
                                             <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="<?php echo base_url();?>MenuCreation/index" style="color:white;"></i> Edit</button>
 
