@@ -370,24 +370,18 @@
 
 
 <!-- =============== Left side End ================-->
-<<<<<<< HEAD
-<<<<<<< HEAD
 <div class="main-content-wrap sidenav-open d-flex flex-column">
-=======
-<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
->>>>>>> b89765c8113219ca39f89d69e3057bbd160d72a4
-=======
-<div class="main-content-wrap m-0 sidenav-open d-flex flex-column">
->>>>>>> b89765c8113219ca39f89d69e3057bbd160d72a4
-    <!-- ============ Body content start ============= -->
+<!-- ============ Body content start ============= -->
     <div class="main-content">
-        <div class="breadcrumb">
-            <img height="50px" width="350px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <!-- <h4>Purchase Information</h4>  -->
-             <!-- <ul>
-                        <li><a href="href.html">Form</a></li>
-                        <li>Basic</li>
-                    </ul>  -->
+        <div class="p-3">
+            <div class="breadcrumb">
+                <img height="50px" width="350px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
+                <h4>Purchase Information</h4> 
+                <!-- <ul>
+                            <li><a href="href.html">Form</a></li>
+                            <li>Basic</li>
+                        </ul>  -->
+            </div>
         </div>
         <div style="margin-top:-10px;" class=" border-top"></div>
         <div class="row card p-3">
@@ -397,10 +391,10 @@
                         <h3></h3>
                         <form id="Form" action="" method="POST">
                             <div class="row p-3">
-                                <div class="col-12 my-heading">
+                                <!-- <div class="col-12 my-heading">
                                     <div>Purchase Information</div>
                                     <hr>
-                                </div>
+                                </div> -->
 
                                 <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1  form-group  mt-0">
                                     <label>Id</label>
