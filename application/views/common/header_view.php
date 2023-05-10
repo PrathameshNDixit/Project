@@ -506,12 +506,12 @@
                                 class="nav-text">Banquet</span></a>
                         <div class="triangle"></div>
 
-                    <li class="nav-item" data-item="form"><a class="nav-item-hold" href="#"> <img height="25px"
+                    <!-- <li class="nav-item" data-item="form"><a class="nav-item-hold" href="#"> <img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\programming.png "><span
                                 class="nav-text">Master1</span></a>
                         <div class="triangle"></div>
-                    </li>
-                    <li class="nav-item" data-item="report"><a class="nav-item-hold" href="#"> <img height="25px"
+                    </li> -->
+                    <!-- <li class="nav-item" data-item="report"><a class="nav-item-hold" href="#"> <img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\reportt.png "><span
                                 class="nav-text">Report</span></a>
                         <div class="triangle"></div>
@@ -525,7 +525,7 @@
                                 src="<?php echo base_url() ?>Assets\images\web.png"><span class="nav-text"
                                 style="color:#0161B5">Website</span></a>
                         <div class="triangle"></div>
-                    </li>
+                    </li> -->
 
 
                 </ul>
