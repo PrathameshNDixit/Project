@@ -41,19 +41,6 @@
             <div class="myhead">Housekeeping</div>
             <p>All House Keeping</p>
         </div>
-        <div class="mydropdown">
-            <div class="dropbtn">
-                <i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-            <div class="mydropdown-content">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Carrers</a>
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Carrers</a>
-            </div>
-        </div>
     </div>
     <div class="dash-card">
         <div class="img-container">
@@ -73,6 +60,15 @@
             <div class="myhead">Banquet</div>
             <p>All About Banquet</p>
         </div>
+        <div class="mydropdown">
+            <div class="dropbtn">
+                <i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div class="mydropdown-content">
+                <a href="<?= base_url(); ?>index.php/mainmenu/create">Main Menu Type</a>
+                <a href="<?= base_url(); ?>index.php/menucreation/create">Menu Creation</a>
+            </div>
+        </div>
     </div>
     <div class="dash-card">
         <div class="img-container">
@@ -81,6 +77,16 @@
         <div class="content-container">
             <div class="myhead">Inventory</div>
             <p>All About Inventory</p>
+        </div>
+        <div class="mydropdown">
+            <div class="dropbtn">
+                <i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div class="mydropdown-content">
+                <a href="<?= base_url(); ?>index.php/InvPurOrder/create">Purchase Information</a>
+                <a href="<?= base_url(); ?>index.php/grn/create">GRN Information</a>
+                <a href="<?= base_url(); ?>index.php/salesreturn/create">Sales Return Information</a>
+            </div>
         </div>
     </div>
     <div class="dash-card">
@@ -126,6 +132,15 @@
         <div class="content-container">
             <div class="myhead">Health Club</div>
             <p>All Health Club</p>
+        </div>
+        <div class="mydropdown">
+            <div class="dropbtn">
+                <i id="mynav-menu-btn" class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div class="mydropdown-content">
+                <a href="<?= base_url(); ?>index.php/booking/create">Booking</a>
+                <a href="<?= base_url(); ?>index.php/packagecreation/create">Pakage Information</a>
+            </div>
         </div>
     </div>
     <div class="dash-card">

@@ -444,9 +444,9 @@
                             <!-- <a class="dropdown-item">Account settings</a>
                             <a class="dropdown-item">Billing history</a> -->
                             <div class="d-inline-flex p-2 text-white">
-                                <div class="p-2 dropdown-item "><a href="Profile" style="color:6F6F6F;"><i
+                                <!-- <div class="p-2 dropdown-item "><a href="Profile" style="color:6F6F6F;"><i
                                             class="fa fa-lg fa-fw fa-user-circle-o" aria-hidden="true"></i>Profile</a>
-                                </div>
+                                </div> -->
                                 <!-- <div class="p-2 dropdown-item"><div><i class="fa  fa-lg fa-spin fa-lg fa-fw fa-cog " aria-hidden="true"></i></div><a href="#">Setting</a></div> -->
 
 
@@ -477,7 +477,7 @@
                         <div class="triangle"></div>
                     </li>
                     <li class="nav-item" data-item="extrakits"><a class="nav-item-hold"
-                            href="<?= base_url() ?>Employee"><img height="25px"
+                            href="<?= base_url() ?>employee/create"><img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\division.png "><span
                                 class="nav-text">Employee</span></a>
                         <div class="triangle"></div>
@@ -488,7 +488,8 @@
                         <div class="triangle"></div>
                     </li>
                     <li class="nav-item" data-item="Banquet"><a class="nav-item-hold" href="#"> <img height="25px"
-                                src="<?php echo base_url() ?>Assets\images\book.png "><span class="nav-text">Banquet</span></a>
+                                src="<?php echo base_url() ?>Assets\images\book.png "><span
+                                class="nav-text">Banquet</span></a>
                         <div class="triangle"></div>
                     </li>
                     <li class="nav-item" data-item="Inventory"><a class="nav-item-hold" href="#"> <img height="25px"
@@ -506,12 +507,12 @@
                                 class="nav-text">Banquet</span></a>
                         <div class="triangle"></div>
 
-                    <!-- <li class="nav-item" data-item="form"><a class="nav-item-hold" href="#"> <img height="25px"
+                        <!-- <li class="nav-item" data-item="form"><a class="nav-item-hold" href="#"> <img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\programming.png "><span
                                 class="nav-text">Master1</span></a>
                         <div class="triangle"></div>
                     </li> -->
-                    <!-- <li class="nav-item" data-item="report"><a class="nav-item-hold" href="#"> <img height="25px"
+                        <!-- <li class="nav-item" data-item="report"><a class="nav-item-hold" href="#"> <img height="25px"
                                 src="<?php echo base_url() ?>Assets\images\reportt.png "><span
                                 class="nav-text">Report</span></a>
                         <div class="triangle"></div>
@@ -604,9 +605,6 @@
                         <li class="nav-item"><a href="<?= base_url(); ?>Company/edit"><i
                                     class="fas fa-pen-square fa-lg animtxt" aria-hidden="true"></i><span
                                     class="item-name">&nbsp;&nbsp;EditCompany</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Company/delete"><i
-                                    class="fas fa-trash fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;&nbsp;DeleteCompany</span></a></li>
                     </ul>
                     <!-- blogs navs -->
                     <ul class="childNav " data-parent="blogs">
@@ -630,9 +628,11 @@
                             <div class="triangle"></div>
                         </li> -->
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/mainmenu/create"><i
-                                    class="fa-lg fas fa-plus-circle animtxt"></i>&nbsp;&nbsp;Main Menu Type</span></a></li>
+                                    class="fa-lg fas fa-plus-circle animtxt"></i>&nbsp;&nbsp;Main Menu Type</span></a>
+                        </li>
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/menucreation/create"><i
-                                    class="fa-lg fas fa-plus-circle animtxt"></i>&nbsp;&nbsp;Menu Creation</span></a></li>
+                                    class="fa-lg fas fa-plus-circle animtxt"></i>&nbsp;&nbsp;Menu Creation</span></a>
+                        </li>
                         <!-- <li class="nav-item"><a href="<?= base_url(); ?>Opening/create"><i
                                     class="fa-lg fas fa-plus-circle animtxt"></i>&nbsp;&nbsp;Add Opening</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>Opening/edit"><i
@@ -663,23 +663,23 @@
 
                     <ul class="childNav" data-parent="Inventory">
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/InvPurOrder/create"><i
-                                class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
-                                class="item-name">Purchase Information</span></a></li>
+                                    class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Purchase Information</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/grn/create"><i
-                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
-                                class="item-name">GRN Information</span></a></li>
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">GRN Information</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/salesreturn/create"><i
-                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
-                                class="item-name">Sales Return Information</span></a></li>
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Sales Return Information</span></a></li>
                     </ul>
 
                     <ul class="childNav" data-parent="HealthClub">
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/booking/create"><i
-                                class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
-                                class="item-name">Health Club Booking</span></a></li>
+                                    class="fa fa-lg fas fa-user-plus animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Health Club Booking</span></a></li>
                         <li class="nav-item"><a href="<?= base_url(); ?>index.php/packagecreation/create"><i
-                                class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
-                                class="item-name">Package Detail Information</span></a></li>
+                                    class=" fa-lg fas fa-user-edit animtxt" aria-hidden="true"></i><span
+                                    class="item-name">Package Detail Information</span></a></li>
                     </ul>
 
                     <ul class="childNav" data-parent="website">
@@ -723,15 +723,9 @@
                         <li class="nav-item"><a href="<?= base_url(); ?>Employee/create"><i
                                     class="fa-lg fa fa-address-book animtxt" aria-hidden="true"></i><span
                                     class="item-name">&nbsp;Employee&nbsp;Create</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Employee/edit"><i
+                        <li class="nav-item"><a href="<?= base_url(); ?>Employee"><i
                                     class="fa fa-lg fas fa-pen-square animtxt" aria-hidden="true"></i><span
                                     class="item-name">&nbsp;&nbsp;Employee Edit</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Employee/delete"><i
-                                    class="fa fa-lg fa-user-times animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;Employee&nbsp;Delete</span></a></li>
-                        <li class="nav-item"><a href="<?= base_url(); ?>Employee/report"><i
-                                    class="fas fa-file-alt  fa-lg animtxt" aria-hidden="true"></i><span
-                                    class="item-name">&nbsp;Report</span></a></li>
 
                     </ul>
                     <ul class="childNav" data-parent="Frontoffice">

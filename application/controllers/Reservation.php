@@ -6,6 +6,13 @@ class Reservation extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->loggedin();
+    }
+    private function loggedin()
+    {
+        if (!$this->session->userdata('authenticated')) {
+            redirect('users/login');
+        }
     }
     public function index()
     {
@@ -31,21 +38,21 @@ class Reservation extends CI_Controller
         $Address = $this->input->post('Address');
         $Place = $this->input->post('Place');
         $OutwardLetterNo = $this->input->post('OutwardLetterNo');
-        $IncommingRefNo=$this->input->post('IncommingRefNo');
-        $IncommingDate=$this->input->post('IncommingDate');
-        $Subject=$this->input->post('Subject');
-        $Remark=$this->input->post('Remark');
+        $IncommingRefNo = $this->input->post('IncommingRefNo');
+        $IncommingDate = $this->input->post('IncommingDate');
+        $Subject = $this->input->post('Subject');
+        $Remark = $this->input->post('Remark');
         $fields = array(
             'Name' => $name,
             'OutwardDate' => $OutwardDate,
             'OutwardNo' => $OutwardNo,
-            'Address'=>$Address,
-            'Place'=>$Place,
-            'OutwardLetterNo'=>$OutwardLetterNo,
-            'IncommingRefNo'=>$IncommingRefNo,
-            'Subject'=>$Subject,
-            'IncommingDate'=>$IncommingDate,
-            'Remark'=>$Remark
+            'Address' => $Address,
+            'Place' => $Place,
+            'OutwardLetterNo' => $OutwardLetterNo,
+            'IncommingRefNo' => $IncommingRefNo,
+            'Subject' => $Subject,
+            'IncommingDate' => $IncommingDate,
+            'Remark' => $Remark
         );
         echo json_encode($fields);
         $this->Commonmodel->insertRecord("postaldispatch", $fields);
